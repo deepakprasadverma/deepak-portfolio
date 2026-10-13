@@ -1,0 +1,2461 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deepak Prasad Verma | Full-Stack Developer & IT Engineer</title>
+  <meta name="description" content="Official Portfolio of Deepak Prasad Verma â€” Full-Stack MERN Developer, B.Tech Information Technology Student at UCET Hazaribagh, and creator of OSHN BLRREALTOR & Verma Brothers Fitness." />
+  <meta name="keywords" content="Deepak Prasad Verma, deepakprasadverma, UCET Hazaribagh, Government Polytechnic Dumka, Full Stack Developer, React Developer, MERN Stack, Portfolio" />
+  <meta name="author" content="Deepak Prasad Verma" />
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Deepak Prasad Verma | Full-Stack MERN Developer & IT Engineer" />
+  <meta property="og:description" content="Explore production web applications, full-stack MERN architectures, and Python geolocation tools built by Deepak Prasad Verma." />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/145129697?v=4" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom Styles -->
+  <style>
+/* ==========================================================================
+   DEEPAK PRASAD VERMA â€” PORTFOLIO CUSTOM STYLES
+   ========================================================================== */
+
+:root {
+  --bg-primary: #060913;
+  --bg-secondary: #0c1222;
+  --bg-card: rgba(15, 23, 42, 0.72);
+  --bg-card-hover: rgba(23, 35, 64, 0.88);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --border-subtle: rgba(148, 163, 184, 0.14);
+  --border-glow: rgba(56, 189, 248, 0.45);
+  --accent-cyan: #38bdf8;
+  --accent-indigo: #6366f1;
+  --accent-emerald: #10b981;
+}
+
+html.light {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-card: rgba(255, 255, 255, 0.88);
+  --bg-card-hover: rgba(255, 255, 255, 0.98);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-subtle: rgba(15, 23, 42, 0.1);
+  --border-glow: rgba(79, 70, 229, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #060913;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+  border: 2px solid #060913;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8;
+}
+
+/* Ambient Cyber Grid Background */
+.bg-cyber-grid {
+  background-size: 42px 42px;
+  background-image: 
+    linear-gradient(to right, rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+}
+
+html.light .bg-cyber-grid {
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+}
+
+/* Glassmorphic Surfaces */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-glow);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(2, 6, 23, 0.65),
+              0 0 25px -5px rgba(56, 189, 248, 0.15);
+}
+
+html.light .glass-card:hover {
+  box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.12),
+              0 0 25px -5px rgba(79, 70, 229, 0.12);
+}
+
+.glass-nav {
+  background: rgba(6, 9, 19, 0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+html.light .glass-nav {
+  background: rgba(248, 250, 252, 0.85);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+/* Gradient Text Utilities */
+.text-gradient-primary {
+  background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #34d399 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Orbital Avatar Ring */
+.avatar-orbit-wrapper {
+  position: relative;
+}
+
+.avatar-orbit-ring {
+  position: absolute;
+  inset: -10px;
+  border-radius: 9999px;
+  background: conic-gradient(from 0deg, transparent 0%, #38bdf8 25%, #6366f1 50%, transparent 75%, #10b981 100%);
+  animation: spinSlow 10s linear infinite;
+  opacity: 0.75;
+  filter: blur(1px);
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Floating Badges */
+.animate-float-slow {
+  animation: floatY 4.5s ease-in-out infinite;
+}
+.animate-float-delayed {
+  animation: floatY 5s ease-in-out 1.8s infinite;
+}
+.animate-float-reverse {
+  animation: floatYReverse 4.8s ease-in-out 0.9s infinite;
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-9px); }
+}
+
+@keyframes floatYReverse {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(8px); }
+}
+
+/* Typewriter Cursor */
+.cursor-blink {
+  display: inline-block;
+  width: 2px;
+  height: 1.15em;
+  background-color: #38bdf8;
+  margin-left: 3px;
+  vertical-align: middle;
+  animation: blink 0.95s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Skill Progress Bar Animation */
+.skill-bar-fill {
+  transition: width 1.1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Project Filter Active State */
+.filter-btn.active {
+  background: linear-gradient(135deg, #0284c7, #4f46e5);
+  color: #ffffff;
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 8px 20px -6px rgba(56, 189, 248, 0.45);
+}
+
+/* Light mode adaptations for hardcoded dark classes */
+html.light .light-invert-bg {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+html.light .text-slate-300,
+html.light .text-slate-400 {
+  color: #334155 !important;
+}
+
+html.light .text-white {
+  color: #0f172a !important;
+}
+
+html.light .keep-white {
+  color: #ffffff !important;
+}
+
+/* Print Stylesheet for ATS Resume Modal */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #resume-modal,
+  #resume-modal * {
+    visibility: visible;
+  }
+  #resume-modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+</style>
+</head>
+<body class="bg-cyber-grid antialiased selection:bg-sky-400 selection:text-slate-950 relative">
+
+  <!-- Ambient Glow Orbs -->
+  <div class="fixed top-[-10%] left-[-10%] w-[420px] h-[420px] rounded-full bg-sky-500/10 blur-[130px] pointer-events-none z-0"></div>
+  <div class="fixed bottom-[-10%] right-[-5%] w-[480px] h-[480px] rounded-full bg-indigo-600/10 blur-[140px] pointer-events-none z-0"></div>
+
+  <!-- ========================================================================
+       STICKY NAVIGATION BAR
+       ======================================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="#top" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-400 via-indigo-500 to-emerald-400 p-[1.5px] shadow-lg shadow-sky-500/20">
+          <div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center font-display font-bold text-white text-sm tracking-wider group-hover:bg-slate-900 transition">
+            DPV
+          </div>
+        </div>
+        <div>
+          <span class="font-display font-bold text-lg tracking-tight text-white block leading-none">
+            Deepak<span class="text-sky-400">.dev</span>
+          </span>
+          <span class="text-[11px] font-mono-code text-slate-400 block mt-0.5">
+            @deepakprasadverma
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-sky-400 transition">About</a>
+        <a href="#projects" class="hover:text-sky-400 transition">Projects</a>
+        <a href="#skills" class="hover:text-sky-400 transition">Tech Stack</a>
+        <a href="#journey" class="hover:text-sky-400 transition">Education & Journey</a>
+        <a href="#linkedin-review" class="text-amber-400 hover:text-amber-300 transition flex items-center gap-1.5">
+          <i class="fab fa-linkedin"></i> Profile Review
+        </a>
+        <a href="#contact" class="hover:text-sky-400 transition">Contact</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="hidden sm:flex items-center gap-3">
+        <button
+          onclick="document.getElementById('terminal-card').scrollIntoView({behavior:'smooth', block:'center'}); setTimeout(()=>document.getElementById('terminal-input').focus(), 400);"
+          class="px-3 py-2 rounded-xl bg-slate-900/90 border border-slate-700/80 text-xs font-mono-code text-slate-300 hover:border-sky-400/60 hover:text-white transition flex items-center gap-2"
+          title="Open Interactive Terminal (Ctrl+K)"
+        >
+          <i class="fas fa-terminal text-emerald-400"></i>
+          <span>Terminal</span>
+          <kbd class="px-1.5 py-0.5 text-[10px] bg-slate-800 text-slate-400 rounded">Ctrl+K</kbd>
+        </button>
+
+        <button
+          onclick="toggleTheme()"
+          class="w-10 h-10 rounded-xl bg-slate-900/90 border border-slate-700/80 flex items-center justify-center hover:border-sky-400/60 transition"
+          title="Toggle Dark / Light Mode"
+          aria-label="Toggle Theme"
+        >
+          <i id="theme-toggle-icon" class="fas fa-sun text-amber-400"></i>
+        </button>
+
+        <button
+          onclick="openResumeModal()"
+          class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-sky-500 to-indigo-600 text-white keep-white font-semibold text-xs sm:text-sm shadow-lg shadow-sky-500/25 hover:opacity-95 transition flex items-center gap-2"
+        >
+          <i class="fas fa-file-alt"></i>
+          <span>Resume / CV</span>
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <div class="flex items-center gap-2 lg:hidden">
+        <button
+          onclick="toggleTheme()"
+          class="w-9 h-9 rounded-lg bg-slate-900/90 border border-slate-700/80 flex items-center justify-center sm:hidden"
+          aria-label="Toggle Theme"
+        >
+          <i class="fas fa-adjust text-sky-400 text-sm"></i>
+        </button>
+        <button
+          id="mobile-menu-btn"
+          class="w-10 h-10 rounded-xl bg-slate-900/90 border border-slate-700/80 flex items-center justify-center text-slate-200 hover:text-sky-400"
+          aria-label="Open Menu"
+        >
+          <i class="fas fa-bars text-lg"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-slate-950/95 border-b border-slate-800 px-6 py-5 space-y-3">
+      <a href="#about" class="block py-2 text-slate-200 hover:text-sky-400 font-medium">About</a>
+      <a href="#projects" class="block py-2 text-slate-200 hover:text-sky-400 font-medium">Projects</a>
+      <a href="#skills" class="block py-2 text-slate-200 hover:text-sky-400 font-medium">Tech Stack</a>
+      <a href="#journey" class="block py-2 text-slate-200 hover:text-sky-400 font-medium">Education & Journey</a>
+      <a href="#linkedin-review" class="block py-2 text-amber-400 font-semibold"><i class="fab fa-linkedin mr-1.5"></i> LinkedIn Profile Review</a>
+      <a href="#contact" class="block py-2 text-slate-200 hover:text-sky-400 font-medium">Contact</a>
+      <div class="pt-3 flex gap-3">
+        <button onclick="openResumeModal()" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-sky-500 to-indigo-600 text-white keep-white font-semibold text-sm">
+          <i class="fas fa-file-alt mr-1.5"></i> View / Print Resume
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       HERO SECTION
+       ======================================================================== -->
+  <main id="top" class="relative z-10 pt-28 md:pt-36 pb-20">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+        <!-- Left Column: Intro & CTAs (7 cols) -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <!-- Status Badge -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-medium">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span class="w-2 h-2 rounded-full bg-emerald-400 -ml-3.5"></span>
+            <span>Open to Software Engineering Internships & Full-Stack Roles</span>
+          </div>
+
+          <!-- Main Heading -->
+          <div class="space-y-2">
+            <p class="text-xs sm:text-sm font-mono-code uppercase tracking-widest text-sky-400">
+              Hazaribagh, Jharkhand, India â€¢ Information Technology Engineer
+            </p>
+            <h1 class="text-4xl sm:text-5xl xl:text-6xl font-bold font-display tracking-tight text-white leading-[1.12]">
+              Building Scalable <br class="hidden sm:inline" />
+              <span class="text-gradient-primary">Full-Stack Web</span> &amp; <br class="hidden sm:inline" />
+              Intelligent Systems.
+            </h1>
+          </div>
+
+          <!-- Dynamic Typewriter Subtitle -->
+          <div class="h-8 flex items-center justify-center lg:justify-start text-lg sm:text-xl font-mono-code text-slate-300">
+            <span class="text-emerald-400 mr-2">&gt;</span>
+            <span id="typewriter-text" class="font-semibold text-sky-300">Full-Stack MERN Developer</span>
+            <span class="cursor-blink"></span>
+          </div>
+
+          <!-- Bio Paragraph -->
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Hi, I'm <strong class="text-white font-semibold">Deepak Prasad Verma</strong> â€” an Information Technology Engineering undergraduate at <strong class="text-sky-300">UCET Hazaribagh</strong> (Vinoba Bhave University) and Diploma graduate from <strong class="text-sky-300">Government Polytechnic, Dumka</strong>. I architect modern full-stack web applications with <span class="text-white font-medium">React 19, Node.js, Express, MongoDB, Tailwind CSS</span>, and build hardware/software utilities in <span class="text-white font-medium">Python &amp; Java</span>.
+          </p>
+
+          <!-- Primary CTA Buttons -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+            <a
+              href="#projects"
+              class="px-7 py-3.5 rounded-2xl bg-gradient-to-r from-sky-500 via-indigo-500 to-indigo-600 text-white keep-white font-semibold text-sm sm:text-base shadow-xl shadow-sky-500/25 hover:scale-[1.02] transition flex items-center gap-2.5"
+            >
+              <span>Explore Live Projects</span>
+              <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/deepak-prasad-verma-872947250/"
+              target="_blank"
+              rel="noopener"
+              class="px-6 py-3.5 rounded-2xl glass-card text-white font-semibold text-sm sm:text-base hover:border-sky-400/60 transition flex items-center gap-2.5"
+            >
+              <i class="fab fa-linkedin text-sky-400 text-lg"></i>
+              <span>Connect on LinkedIn</span>
+            </a>
+
+            <button
+              onclick="triggerBawalMode()"
+              class="px-5 py-3.5 rounded-2xl bg-pink-500/10 border border-pink-500/30 text-pink-300 hover:bg-pink-500/20 font-semibold text-sm transition flex items-center gap-2"
+              title="Trigger interactive fireworks tribute to Deepak's Bawal repository"
+            >
+              <i class="fas fa-wand-magic-sparkles"></i>
+              <span>Bawal FX</span>
+            </button>
+          </div>
+
+          <!-- Social & Coding Profiles Strip -->
+          <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-3">
+            <span class="text-xs font-mono-code uppercase tracking-wider text-slate-400 mr-1">Find me on:</span>
+
+            <a href="https://github.com/deepakprasadverma" target="_blank" rel="noopener" class="px-3.5 py-2 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-sky-400/50 text-slate-300 hover:text-white text-xs font-medium transition flex items-center gap-2">
+              <i class="fab fa-github text-base"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/deepak-prasad-verma-872947250/" target="_blank" rel="noopener" class="px-3.5 py-2 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-sky-400/50 text-slate-300 hover:text-white text-xs font-medium transition flex items-center gap-2">
+              <i class="fab fa-linkedin text-sky-400 text-base"></i> LinkedIn
+            </a>
+            <a href="https://leetcode.com/u/deepakprasadverma/" target="_blank" rel="noopener" class="px-3.5 py-2 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-amber-400/50 text-slate-300 hover:text-white text-xs font-medium transition flex items-center gap-2">
+              <i class="fas fa-code text-amber-400 text-sm"></i> LeetCode
+            </a>
+            <a href="https://www.instagram.com/mr_prasad_verma" target="_blank" rel="noopener" class="px-3.5 py-2 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-pink-400/50 text-slate-300 hover:text-white text-xs font-medium transition flex items-center gap-2">
+              <i class="fab fa-instagram text-pink-400 text-base"></i> @mr_prasad_verma
+            </a>
+            <button onclick="copyText('deepakprasadverma90@gmail.com', 'Email copied: deepakprasadverma90@gmail.com')" class="px-3.5 py-2 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-emerald-400/50 text-slate-300 hover:text-white text-xs font-medium transition flex items-center gap-2">
+              <i class="fas fa-envelope text-emerald-400 text-sm"></i> Copy Email
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column: Orbital Profile Card (5 cols) -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-md">
+
+            <!-- Floating Skill Pill 1 -->
+            <div class="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-2xl glass-card absolute -top-5 -left-4 z-20 animate-float-slow shadow-xl">
+              <i class="fab fa-react text-sky-400 text-lg"></i>
+              <div class="text-left">
+                <div class="text-xs font-bold text-white leading-none">React 19 + Vite</div>
+                <div class="text-[10px] text-slate-400 font-mono-code">Frontend Architecture</div>
+              </div>
+            </div>
+
+            <!-- Floating Skill Pill 2 -->
+            <div class="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-2xl glass-card absolute top-12 -right-5 z-20 animate-float-delayed shadow-xl">
+              <i class="fas fa-database text-emerald-400 text-base"></i>
+              <div class="text-left">
+                <div class="text-xs font-bold text-white leading-none">Node &amp; MongoDB</div>
+                <div class="text-[10px] text-slate-400 font-mono-code">REST APIs on Render</div>
+              </div>
+            </div>
+
+            <!-- Floating Skill Pill 3 -->
+            <div class="hidden sm:flex items-center gap-2 px-3.5 py-2 rounded-2xl glass-card absolute -bottom-4 left-6 z-20 animate-float-reverse shadow-xl">
+              <i class="fab fa-python text-amber-400 text-lg"></i>
+              <div class="text-left">
+                <div class="text-xs font-bold text-white leading-none">Python &amp; DSA</div>
+                <div class="text-[10px] text-slate-400 font-mono-code">Geo-Tracking &amp; Core CS</div>
+              </div>
+            </div>
+
+            <!-- Main Profile Card -->
+            <div class="glass-card rounded-3xl p-6 sm:p-8 relative overflow-hidden">
+              <div class="flex flex-col items-center text-center">
+                <!-- Orbital Avatar -->
+                <div class="avatar-orbit-wrapper w-36 h-36 sm:w-44 sm:h-44 mb-5">
+                  <div class="avatar-orbit-ring"></div>
+                  <img
+                    src="https://avatars.githubusercontent.com/u/145129697?v=4"
+                    onerror="this.src='https://avatars.githubusercontent.com/u/145129697?v=4'"
+                    alt="Deepak Prasad Verma"
+                    class="w-full h-full object-cover rounded-full border-4 border-slate-950 relative z-10 shadow-2xl"
+                  />
+                  <span
+                    class="absolute bottom-2 right-2 z-20 w-8 h-8 rounded-full bg-sky-500 text-slate-950 flex items-center justify-center shadow-lg border-2 border-slate-950"
+                    title="Verified Developer Profile"
+                  >
+                    <i class="fas fa-check text-xs font-bold"></i>
+                  </span>
+                </div>
+
+                <h2 class="text-2xl font-bold font-display text-white">Deepak Prasad Verma</h2>
+                <p class="text-xs font-mono-code text-sky-400 mt-0.5 mb-3">
+                  B.Tech IT @ UCET Hazaribagh â€¢ Diploma @ GP Dumka
+                </p>
+
+                <!-- Mini Credential Tags -->
+                <div class="flex flex-wrap justify-center gap-1.5 mb-6">
+                  <span class="px-2.5 py-1 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] text-slate-300 font-medium">
+                    <i class="fas fa-laptop-code text-sky-400 mr-1"></i>MERN Stack
+                  </span>
+                  <span class="px-2.5 py-1 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] text-slate-300 font-medium">
+                    <i class="fas fa-users text-indigo-400 mr-1"></i>Peer Mentor
+                  </span>
+                  <span class="px-2.5 py-1 rounded-lg bg-slate-900/90 border border-slate-800 text-[11px] text-slate-300 font-medium">
+                    <i class="fas fa-map-marker-alt text-emerald-400 mr-1"></i>Jharkhand, IN
+                  </span>
+                </div>
+
+                <!-- Live Stats Grid -->
+                <div class="grid grid-cols-3 gap-2.5 w-full pt-4 border-t border-slate-800/80">
+                  <div class="p-2.5 rounded-2xl bg-slate-900/70 border border-slate-800/80">
+                    <div id="gh-repos-count" class="text-xl font-bold font-display text-white">5</div>
+                    <div class="text-[11px] text-slate-400">GitHub Repos</div>
+                  </div>
+                  <div class="p-2.5 rounded-2xl bg-slate-900/70 border border-slate-800/80">
+                    <div class="text-xl font-bold font-display text-emerald-400">2</div>
+                    <div class="text-[11px] text-slate-400">Live Cloud Apps</div>
+                  </div>
+                  <div class="p-2.5 rounded-2xl bg-slate-900/70 border border-slate-800/80">
+                    <div id="gh-followers-count" class="text-xl font-bold font-display text-sky-400">10</div>
+                    <div class="text-[11px] text-slate-400">GH Followers</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         BENTO GRID: ABOUT + INTERACTIVE DEVELOPER TERMINAL
+         ====================================================================== -->
+    <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="text-xs font-mono-code uppercase tracking-widest text-sky-400 block mb-2">
+            // 01. EXECUTIVE OVERVIEW &amp; INTERACTIVE SHELL
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-bold font-display text-white">
+            Engineering Mindset Meets <span class="text-gradient-primary">Production Delivery</span>
+          </h2>
+        </div>
+        <p class="text-slate-400 text-sm max-w-md">
+          Combining a hands-on Polytechnic Diploma foundation with an undergraduate Information Technology degree to ship real-world products.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+        <!-- Bento Card 1: Engineering Story (7 cols) -->
+        <div class="lg:col-span-7 glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-sky-500/15 border border-sky-500/30 flex items-center justify-center text-sky-400">
+                <i class="fas fa-layer-group"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold font-display text-white">From Concept to Cloud Deployment</h3>
+                <p class="text-xs text-slate-400">Full-Stack Web Engineering â€¢ Python &amp; Hardware Scripting</p>
+              </div>
+            </div>
+
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+              Whether it's architecting a luxury real estate portal for Bengaluru (<strong class="text-white">OSHN BLRREALTOR</strong>) with a React 19 frontend on Vercel and an Express + MongoDB backend on Render, or crafting an AI-assisted workout generator for a local fitness brand in Hazaribagh (<strong class="text-white">Verma Brothers Fitness</strong>), I focus on building responsive, user-centric software that solves real business problems.
+            </p>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              Beyond web development, I enjoy working close to the metal with <strong class="text-white">Python</strong> â€” parsing live NMEA satellite streams from serial GPS receivers (<code class="text-sky-300 font-mono-code text-xs">COM3 / ttyUSB0</code>) and visualizing geospatial data on interactive Folium maps, while actively mentoring peers in technical societies at <strong class="text-white">UCET Hazaribagh</strong>.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-6 pt-6 border-t border-slate-800/80">
+            <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-slate-800">
+              <div class="text-xs font-mono-code text-sky-400 mb-1">FRONTEND</div>
+              <div class="text-sm font-bold text-white">React 19 &amp; Tailwind v4</div>
+              <div class="text-xs text-slate-400 mt-0.5">Responsive, fast SPAs</div>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-slate-800">
+              <div class="text-xs font-mono-code text-emerald-400 mb-1">BACKEND &amp; DB</div>
+              <div class="text-sm font-bold text-white">Node, Express &amp; MongoDB</div>
+              <div class="text-xs text-slate-400 mt-0.5">REST APIs &amp; Mongoose</div>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-slate-900/60 border border-slate-800">
+              <div class="text-xs font-mono-code text-amber-400 mb-1">CORE &amp; GIS</div>
+              <div class="text-sm font-bold text-white">Python, Java &amp; DSA</div>
+              <div class="text-xs text-slate-400 mt-0.5">Folium Maps &amp; PySerial</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Card 2: Interactive Developer Terminal (5 cols) -->
+        <div id="terminal-card" class="lg:col-span-5 glass-card rounded-3xl overflow-hidden flex flex-col border border-slate-700/80">
+          <!-- Terminal Window Bar -->
+          <div class="bg-slate-900/95 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-400"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+              <span class="ml-2 text-xs font-mono-code text-slate-400">deepak@ucet-dev:~ (dpv-shell)</span>
+            </div>
+            <span class="text-[11px] font-mono-code text-emerald-400">â— interactive</span>
+          </div>
+
+          <!-- Quick Command Chips -->
+          <div class="bg-slate-950/80 px-4 py-2 border-b border-slate-800/80 flex flex-wrap items-center gap-1.5">
+            <span class="text-[10px] font-mono-code text-slate-400 mr-1">Try:</span>
+            <button onclick="runTerminalCommand('help')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-sky-500/20 text-[11px] font-mono-code text-sky-300 transition">help</button>
+            <button onclick="runTerminalCommand('projects')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-sky-500/20 text-[11px] font-mono-code text-emerald-300 transition">projects</button>
+            <button onclick="runTerminalCommand('skills')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-sky-500/20 text-[11px] font-mono-code text-indigo-300 transition">skills</button>
+            <button onclick="runTerminalCommand('education')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-sky-500/20 text-[11px] font-mono-code text-amber-300 transition">education</button>
+            <button onclick="runTerminalCommand('bawal')" class="px-2 py-0.5 rounded bg-pink-500/20 hover:bg-pink-500/30 text-[11px] font-mono-code text-pink-300 transition">bawal ðŸŽ†</button>
+            <button onclick="runTerminalCommand('clear')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-rose-500/20 text-[11px] font-mono-code text-slate-400 transition">clear</button>
+          </div>
+
+          <!-- Terminal Output Area -->
+          <div id="terminal-output" class="p-4 font-mono-code text-xs leading-relaxed bg-slate-950/90 flex-1 min-h-[230px] max-h-[260px] overflow-y-auto">
+            <div class="text-slate-400">Welcome to <span class="text-sky-400 font-semibold">Deepak Prasad Verma's</span> interactive portfolio terminal.</div>
+            <div class="text-slate-400 mt-1">Type <span class="text-emerald-400">'help'</span> or click any command chip above to inspect skills, projects, or trigger fireworks.</div>
+            <div class="mt-3">
+              <span class="text-emerald-400 font-semibold">deepak@ucet-dev</span>:<span class="text-sky-400">~</span>$ <span class="text-white">whoami</span>
+            </div>
+            <div class="mt-1 pl-2 border-l-2 border-slate-700/80 text-slate-300">
+              Full-Stack Developer â€¢ B.Tech IT @ UCET Hazaribagh â€¢ Creator of OSHN BLRREALTOR &amp; Verma Brothers Fitness
+            </div>
+          </div>
+
+          <!-- Terminal Input Line -->
+          <div class="bg-slate-900/95 px-4 py-2.5 border-t border-slate-800 flex items-center gap-2 font-mono-code text-xs">
+            <span class="text-emerald-400 font-bold shrink-0">deepak@ucet-dev:~$</span>
+            <input
+              id="terminal-input"
+              type="text"
+              placeholder="Type a command (help, projects, skills, bawal)..."
+              class="w-full bg-transparent text-white focus:outline-none placeholder:text-slate-500"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         FEATURED PROJECTS SECTION
+         ====================================================================== -->
+    <section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+        <div>
+          <span class="text-xs font-mono-code uppercase tracking-widest text-sky-400 block mb-2">
+            // 02. PRODUCTION DEPLOYMENTS &amp; OPEN-SOURCE REPOSITORIES
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-bold font-display text-white">
+            Featured <span class="text-gradient-primary">Engineering Projects</span>
+          </h2>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap gap-2">
+          <button onclick="filterProjects('all', this)" class="filter-btn active px-4 py-2 rounded-xl text-xs font-semibold border border-slate-800 bg-slate-900/80 text-slate-300 transition">
+            All Projects (4)
+          </button>
+          <button onclick="filterProjects('fullstack', this)" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold border border-slate-800 bg-slate-900/80 text-slate-300 transition">
+            Full-Stack MERN
+          </button>
+          <button onclick="filterProjects('frontend', this)" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold border border-slate-800 bg-slate-900/80 text-slate-300 transition">
+            Frontend &amp; AI UX
+          </button>
+          <button onclick="filterProjects('python', this)" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold border border-slate-800 bg-slate-900/80 text-slate-300 transition">
+            Python &amp; IoT
+          </button>
+          <button onclick="filterProjects('creative', this)" class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold border border-slate-800 bg-slate-900/80 text-slate-300 transition">
+            Creative Canvas
+          </button>
+        </div>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- PROJECT 1: OSHN BLRREALTOR -->
+        <article data-category="fullstack frontend" class="project-card glass-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+          <div>
+            <!-- Visual Header Banner -->
+            <div class="h-56 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-950 relative p-6 flex flex-col justify-between overflow-hidden border-b border-slate-800">
+              <div class="absolute -right-10 -bottom-10 w-52 h-52 rounded-full bg-amber-400/10 blur-2xl group-hover:bg-amber-400/20 transition"></div>
+              <div class="flex items-center justify-between relative z-10">
+                <span class="px-3 py-1 rounded-full text-[11px] font-mono-code font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> LIVE ON VERCEL + RENDER
+                </span>
+                <span class="text-xs font-mono-code text-amber-300 bg-amber-500/10 border border-amber-500/25 px-2.5 py-1 rounded-lg">
+                  MERN Stack
+                </span>
+              </div>
+
+              <!-- Mock Browser Preview Card -->
+              <div class="relative z-10 bg-slate-950/90 border border-slate-800/90 rounded-2xl p-4 shadow-2xl group-hover:border-amber-400/40 transition">
+                <div class="flex items-center justify-between mb-2">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+                    <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span class="text-[10px] font-mono-code text-slate-400 ml-1.5">oshn-blr-realtor.vercel.app</span>
+                  </div>
+                  <span class="text-[10px] font-mono-code text-amber-400">RERA Verified</span>
+                </div>
+                <div class="text-base font-display font-bold text-white">OSHN BLRREALTOR â€” Luxury Real Estate</div>
+                <div class="text-xs text-slate-400 mt-0.5">Bengaluru Luxury Apartments, Premium Villas &amp; Investment Plots + Admin Dashboard</div>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-6 sm:p-7">
+              <h3 class="text-2xl font-bold font-display text-white group-hover:text-sky-400 transition">
+                OSHN BLRREALTOR â€” Full-Stack Real Estate Portal
+              </h3>
+              <p class="text-slate-300 text-sm leading-relaxed mt-2.5">
+                End-to-end real estate web platform built for discovering verified luxury properties across Bengaluru. Engineered with a <strong class="text-white">React 19 + Vite + Tailwind CSS v4</strong> frontend, Context API state management, a custom Admin panel, and a <strong class="text-white">Node.js + Express 5 + MongoDB</strong> backend deployed on Render with live database health diagnostics.
+              </p>
+
+              <!-- Tech Badges -->
+              <div class="flex flex-wrap gap-1.5 mt-4">
+                <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-sky-300 font-mono-code">React 19</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-sky-300 font-mono-code">Tailwind CSS v4</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-emerald-300 font-mono-code">Node.js &amp; Express 5</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-emerald-300 font-mono-code">MongoDB &amp; Mongoose</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-indigo-300 font-mono-code">React Router v7</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Footer Actions -->
+          <div class="px-6 sm:px-7 pb-6 pt-3 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center gap-2.5">
+              <a
+                href="https://oshn-blr-realtor.vercel.app"
+                target="_blank"
+                rel="noopener"
+                class="px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs transition flex items-center gap-1.5"
+              >
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a
+                href="https://github.com/deepakprasadverma/oshn-blr-realtor"
+                target="_blank"
+                rel="noopener"
+                class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold text-xs transition flex items-center gap-1.5"
+              >
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+            <button
+              onclick="openProjectModal('oshn')"
+              class="text-xs font-mono-code text-sky-400 hover:text-sky-300 font-semibold flex items-center gap-1"
+            >
+              <span>Inspect Architecture</span>
+              <i class="fas fa-chevron-right text-[10px]"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- PROJECT 2: VERMA BROTHERS FITNESS -->
+        <article data-category="frontend" class="project-card glass-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+          <div>
+            <!-- Visual Header Banner -->
+            <div class="h-56 bg-gradient-to-br from-slate-900 via-orange-950/60 to-slate-950 relative p-6 flex flex-col justify-between overflow-hidden border-b border-slate-800">
+              <div class="absolute -right-10 -bottom-10 w-52 h-52 rounded-full bg-orange-500/15 blur-2xl group-hover:bg-orange-500/25 transition"></div>
+              <div class="flex items-center justify-between relative z-10">
+                <span class="px-3 py-1 rounded-full text-[11px] font-mono-code font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> LIVE ON VERCEL
+                </span>
+                <span class="text-xs font-mono-code text-orange-300 bg-orange-500/10 border border-orange-500/25 px-2.5 py-1 rounded-lg">
+                  AI Workout Coach
+                </span>
+              </div>
+
+              <!-- Mock Browser Preview Card -->
+              <div class="relative z-10 bg-slate-950/90 border border-slate-800/90 rounded-2xl p-4 shadow-2xl group-hover:border-orange-500/40 transition">
+                <div class="flex items-center justify-between mb-2">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-rose-500"></span>
+                    <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                    <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                    <span class="text-[10px] font-mono-code text-slate-400 ml-1.5">verma-brothers-fitness.vercel.app</span>
+                  </div>
+                  <span class="text-[10px] font-mono-code text-orange-400"><i class="fas fa-robot mr-1"></i>AI Coach</span>
+                </div>
+                <div class="text-base font-display font-bold text-white">VERMA BROTHERS FITNESS â€” Hazaribagh</div>
+                <div class="text-xs text-slate-400 mt-0.5">Transform Your Body &amp; Mind â€¢ Interactive AI Daily Workout Planner</div>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-6 sm:p-7">
+              <h3 class="text-2xl font-bold font-display text-white group-hover:text-orange-400 transition">
+                Verma Brothers Fitness â€” AI Coach &amp; Gym Web App
+              </h3>
+              <p class="text-slate-300 text-sm leading-relaxed mt-2.5">
+                Designed and deployed for a premier fitness center in Hazaribagh. Features a custom <strong class="text-white">Virtual AI Workout Coach</strong> that dynamically builds personalized workout splits based on user goals (Weight Loss, Muscle Hypertrophy, Powerlifting, Endurance) and experience level, paired with GitHub Actions CI/CD automation.
+              </p>
+
+              <!-- Tech Badges -->
+              <div class="flex flex-wrap gap-1.5 mt-4">
+                <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-orange-300 font-mono-code">HTML5</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-sky-300 font-mono-code">Tailwind CSS</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-amber-300 font-mono-code">JavaScript (ES6+)</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-emerald-300 font-mono-code">AI Workout Engine</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-indigo-300 font-mono-code">GitHub Actions CI/CD</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Footer Actions -->
+          <div class="px-6 sm:px-7 pb-6 pt-3 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center gap-2.5">
+              <a
+                href="https://verma-brothers-fitness.vercel.app"
+                target="_blank"
+                rel="noopener"
+                class="px-4 py-2 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs transition flex items-center gap-1.5"
+              >
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a
+                href="https://github.com/deepakprasadverma/verma_-brothers-fitness"
+                target="_blank"
+                rel="noopener"
+                class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold text-xs transition flex items-center gap-1.5"
+              >
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+            <button
+              onclick="openProjectModal('fitness')"
+              class="text-xs font-mono-code text-sky-400 hover:text-sky-300 font-semibold flex items-center gap-1"
+            >
+              <span>Inspect Architecture</span>
+              <i class="fas fa-chevron-right text-[10px]"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- PROJECT 3: HYBRID LOCATION TRACKER -->
+        <article data-category="python" class="project-card glass-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+          <div>
+            <!-- Visual Header Banner -->
+            <div class="h-56 bg-gradient-to-br from-slate-900 via-emerald-950/60 to-slate-950 relative p-6 flex flex-col justify-between overflow-hidden border-b border-slate-800">
+              <div class="absolute -right-10 -bottom-10 w-52 h-52 rounded-full bg-emerald-500/15 blur-2xl group-hover:bg-emerald-500/25 transition"></div>
+              <div class="flex items-center justify-between relative z-10">
+                <span class="px-3 py-1 rounded-full text-[11px] font-mono-code font-semibold bg-sky-500/20 text-sky-300 border border-sky-500/30 flex items-center gap-1.5">
+                  <i class="fas fa-satellite-dish text-[10px]"></i> HARDWARE GPS + IP GIS
+                </span>
+                <span class="text-xs font-mono-code text-emerald-300 bg-emerald-500/10 border border-emerald-500/25 px-2.5 py-1 rounded-lg">
+                  Python &amp; Folium
+                </span>
+              </div>
+
+              <!-- Mock Terminal Preview Card -->
+              <div class="relative z-10 bg-slate-950/90 border border-slate-800/90 rounded-2xl p-4 shadow-2xl group-hover:border-emerald-500/40 transition font-mono-code">
+                <div class="flex items-center justify-between mb-1.5 text-[10px] text-slate-400">
+                  <span>location tracker.py â€¢ COM3 @ 9600 baud</span>
+                  <span class="text-emerald-400">NMEA 0183</span>
+                </div>
+                <div class="text-xs text-emerald-300 truncate">$GPRMC / $GPGGA -&gt; Lat: 23.9925Â° N, Lon: 85.3637Â° E</div>
+                <div class="text-[11px] text-slate-400 mt-1">Auto-fallback to IP Geolocation + Folium live_map.html generator</div>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-6 sm:p-7">
+              <h3 class="text-2xl font-bold font-display text-white group-hover:text-emerald-400 transition">
+                Hybrid GPS &amp; IP Geolocation Tracker
+              </h3>
+              <p class="text-slate-300 text-sm leading-relaxed mt-2.5">
+                Dual-mode geolocation engine in Python that connects to physical GPS receivers over serial ports (<code class="text-emerald-300 font-mono-code text-xs">PySerial</code>) to parse live <code class="text-emerald-300 font-mono-code text-xs">$GPRMC</code> and <code class="text-emerald-300 font-mono-code text-xs">$GPGGA</code> NMEA satellite sentences (<code class="text-emerald-300 font-mono-code text-xs">PyNMEA2</code>), with automatic failover to REST IP tracking and interactive HTML map plotting via <strong class="text-white">Folium</strong>.
+              </p>
+
+              <!-- Tech Badges -->
+              <div class="flex flex-wrap gap-1.5 mt-4">
+                <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-amber-300 font-mono-code">Python 3</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-emerald-300 font-mono-code">Folium (Leaflet GIS)</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-sky-300 font-mono-code">PySerial</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-indigo-300 font-mono-code">PyNMEA2</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-slate-300 font-mono-code">REST IP-API</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Footer Actions -->
+          <div class="px-6 sm:px-7 pb-6 pt-3 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center gap-2.5">
+              <a
+                href="https://github.com/deepakprasadverma/location-tracker"
+                target="_blank"
+                rel="noopener"
+                class="px-4 py-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs transition flex items-center gap-1.5"
+              >
+                <i class="fab fa-github"></i> View Repository
+              </a>
+            </div>
+            <button
+              onclick="openProjectModal('tracker')"
+              class="text-xs font-mono-code text-sky-400 hover:text-sky-300 font-semibold flex items-center gap-1"
+            >
+              <span>Inspect Architecture</span>
+              <i class="fas fa-chevron-right text-[10px]"></i>
+            </button>
+          </div>
+        </article>
+
+        <!-- PROJECT 4: BAWAL MODE -->
+        <article data-category="creative frontend" class="project-card glass-card rounded-3xl overflow-hidden flex flex-col justify-between group">
+          <div>
+            <!-- Visual Header Banner -->
+            <div class="h-56 bg-gradient-to-br from-slate-900 via-fuchsia-950/60 to-slate-950 relative p-6 flex flex-col justify-between overflow-hidden border-b border-slate-800">
+              <div class="absolute -right-10 -bottom-10 w-52 h-52 rounded-full bg-pink-500/15 blur-2xl group-hover:bg-pink-500/25 transition"></div>
+              <div class="flex items-center justify-between relative z-10">
+                <span class="px-3 py-1 rounded-full text-[11px] font-mono-code font-semibold bg-pink-500/20 text-pink-300 border border-pink-500/30 flex items-center gap-1.5">
+                  <i class="fas fa-fire text-[10px]"></i> INTERACTIVE CANVAS FX
+                </span>
+                <span class="text-xs font-mono-code text-pink-300 bg-pink-500/10 border border-pink-500/25 px-2.5 py-1 rounded-lg">
+                  HTML5 Canvas 2D
+                </span>
+              </div>
+
+              <!-- Mock Visual Card -->
+              <div class="relative z-10 bg-slate-950/90 border border-slate-800/90 rounded-2xl p-4 shadow-2xl group-hover:border-pink-500/40 transition">
+                <div class="flex items-center justify-between mb-1.5">
+                  <span class="text-xs font-mono-code text-pink-400 font-bold">âš¡ BAWAL MODE âš¡</span>
+                  <span class="text-[10px] font-mono-code text-slate-400">60 FPS Dual-Canvas</span>
+                </div>
+                <div class="text-sm font-display font-bold text-white">Matrix Rain Shader + Particle Burst Physics</div>
+                <div class="text-xs text-slate-400 mt-0.5">Devanagari &amp; Binary digital rain backdrop with interactive radial fireworks</div>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-6 sm:p-7">
+              <h3 class="text-2xl font-bold font-display text-white group-hover:text-pink-400 transition">
+                Bawal Mode â€” Matrix &amp; Particle FX Synthesizer
+              </h3>
+              <p class="text-slate-300 text-sm leading-relaxed mt-2.5">
+                A creative-coding visual experiment built with zero external dependencies. Uses two synchronized HTML5 Canvas layers (<code class="text-pink-300 font-mono-code text-xs">#rain</code> and <code class="text-pink-300 font-mono-code text-xs">#fx</code>) to render continuous Devanagari Matrix digital rain alongside tap-triggered and automated firework particle bursts.
+              </p>
+
+              <!-- Tech Badges -->
+              <div class="flex flex-wrap gap-1.5 mt-4">
+                <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-pink-300 font-mono-code">HTML5 Canvas</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-amber-300 font-mono-code">Vanilla JavaScript</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-sky-300 font-mono-code">2D Particle Physics</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-900 border border-slate-800 text-xs text-indigo-300 font-mono-code">Glassmorphic UI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Footer Actions -->
+          <div class="px-6 sm:px-7 pb-6 pt-3 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center gap-2.5">
+              <button
+                onclick="triggerBawalMode()"
+                class="px-4 py-2 rounded-xl bg-gradient-to-r from-pink-500 to-purple-600 text-white keep-white font-bold text-xs transition flex items-center gap-1.5 shadow-lg shadow-pink-500/20"
+              >
+                <i class="fas fa-bolt"></i> Launch Bawal FX
+              </button>
+              <a
+                href="https://github.com/deepakprasadverma/Bawal"
+                target="_blank"
+                rel="noopener"
+                class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold text-xs transition flex items-center gap-1.5"
+              >
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+            <button
+              onclick="openProjectModal('bawal')"
+              class="text-xs font-mono-code text-sky-400 hover:text-sky-300 font-semibold flex items-center gap-1"
+            >
+              <span>Inspect Architecture</span>
+              <i class="fas fa-chevron-right text-[10px]"></i>
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SKILLS & TECH ARSENAL SECTION
+         ====================================================================== -->
+    <section id="skills" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-mono-code uppercase tracking-widest text-sky-400 block mb-2">
+          // 03. TECHNICAL ARSENAL &amp; CORE COMPETENCIES
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-bold font-display text-white">
+          Full-Stack &amp; Programming <span class="text-gradient-primary">Tech Matrix</span>
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-3">
+          Backed by real repositories, cloud deployments, and competitive programming practice on LeetCode &amp; GitHub.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Category 1: Frontend -->
+        <div class="glass-card rounded-3xl p-6">
+          <div class="w-11 h-11 rounded-2xl bg-sky-500/15 border border-sky-500/30 flex items-center justify-center text-sky-400 text-lg mb-4">
+            <i class="fab fa-react"></i>
+          </div>
+          <h3 class="text-lg font-bold font-display text-white mb-1">Frontend Engineering</h3>
+          <p class="text-xs text-slate-400 mb-5">Modern SPAs &amp; responsive UI systems</p>
+
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span class="text-slate-200">React 19 &amp; Vite</span>
+                <span class="text-sky-400 font-mono-code">90%</span>
+              </div>
+              <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-sky-400 to-indigo-500 rounded-full" style="width: 90%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span class="text-slate-200">JavaScript (ES6+)</span>
+                <span class="text-sky-400 font-mono-code">88%</span>
+              </div>
+              <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-sky-400 to-indigo-500 rounded-full" style="width: 88%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span class="text-slate-200">Tailwind CSS v4 &amp; CSS3</span>
+                <span class="text-sky-400 font-mono-code">94%</span>
+              </div>
+              <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-sky-400 to-indigo-500 rounded-full" style="width: 94%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span class="text-slate-200">HTML5 &amp; Canvas 2D</span>
+                <span class="text-sky-400 font-mono-code">95%</span>
+              </div>
+              <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-sky-400 to-indigo-500 rounded-full" style="width: 95%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Backend & DB -->
+        <div class="glass-card rounded-3xl p-6">
+          <div class="w-11 h-11 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-lg mb-4">
+            <i class="fas fa-server"></i>
+          </div>
+          <h3 class="text-lg font-bold font-display text-white mb-1">Backend &amp; Database</h3>
+          <p class="text-xs text-slate-400 mb-5">Scalable APIs &amp; cloud data persistence</p>
+
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span class="text-slate-200">Node.js &amp; Express 5</span>
+                <span class="text-emerald-400 font-mono-code">86%</span>
+              </div>
+              <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full" style="width: 86%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span class="text-slate-200">MongoDB &amp; Mongoose</span>
+                <span class="text-emerald-400 font-mono-code">85%</span>
+              </div>
+              <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full" style="width: 85%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span class="text-slate-200">RESTful API Design</span>
+                <span class="text-emerald-400 font-mono-code">88%</span>
+              </div>
+              <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full" style="width: 88%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span class="text-slate-200">React Router v7 &amp; Context</span>
+                <span class="text-emerald-400 font-mono-code">87%</span>
+              </div>
+              <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full" style="width: 87%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Programming & Core CS -->
+        <div class="glass-card rounded-3xl p-6">
+          <div class="w-11 h-11 rounded-2xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 text-lg mb-4">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3 class="text-lg font-bold font-display text-white mb-1">Languages &amp; Core CS</h3>
+          <p class="text-xs text-slate-400 mb-5">Algorithms, scripting &amp; IoT interfacing</p>
+
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span class="text-slate-200">Python 3</span>
+                <span class="text-amber-400 font-mono-code">88%</span>
+              </div>
+              <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-amber-400 to-orange-500 rounded-full" style="width: 88%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span class="text-slate-200">Java</span>
+                <span class="text-amber-400 font-mono-code">82%</span>
+              </div>
+              <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-amber-400 to-orange-500 rounded-full" style="width: 82%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span class="text-slate-200">Data Structures &amp; Algorithms</span>
+                <span class="text-amber-400 font-mono-code">80%</span>
+              </div>
+              <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-amber-400 to-orange-500 rounded-full" style="width: 80%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span class="text-slate-200">Folium GIS &amp; PySerial GPS</span>
+                <span class="text-amber-400 font-mono-code">85%</span>
+              </div>
+              <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-amber-400 to-orange-500 rounded-full" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Cloud & DevOps -->
+        <div class="glass-card rounded-3xl p-6">
+          <div class="w-11 h-11 rounded-2xl bg-indigo-500/15 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-lg mb-4">
+            <i class="fas fa-cloud-upload-alt"></i>
+          </div>
+          <h3 class="text-lg font-bold font-display text-white mb-1">Cloud &amp; DevOps</h3>
+          <p class="text-xs text-slate-400 mb-5">CI/CD pipelines &amp; production hosting</p>
+
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span class="text-slate-200">Git &amp; GitHub Workflows</span>
+                <span class="text-indigo-400 font-mono-code">92%</span>
+              </div>
+              <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full" style="width: 92%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span class="text-slate-200">Vercel Edge Deployment</span>
+                <span class="text-indigo-400 font-mono-code">94%</span>
+              </div>
+              <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full" style="width: 94%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span class="text-slate-200">Render.com (render.yaml)</span>
+                <span class="text-indigo-400 font-mono-code">88%</span>
+              </div>
+              <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full" style="width: 88%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-1">
+                <span class="text-slate-200">GitHub Actions CI/CD</span>
+                <span class="text-indigo-400 font-mono-code">85%</span>
+              </div>
+              <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         EDUCATION, EXPERIENCE & LEADERSHIP TIMELINE
+         ====================================================================== -->
+    <section id="journey" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+      <div class="mb-12">
+        <span class="text-xs font-mono-code uppercase tracking-widest text-sky-400 block mb-2">
+          // 04. ACADEMIC CREDENTIALS &amp; DEVELOPMENT JOURNEY
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-bold font-display text-white">
+          Education &amp; <span class="text-gradient-primary">Experience Timeline</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+        <!-- Column 1: Academic Credentials -->
+        <div class="space-y-6">
+          <h3 class="text-lg font-mono-code uppercase tracking-wider text-sky-400 flex items-center gap-2">
+            <i class="fas fa-graduation-cap"></i> Academic Education
+          </h3>
+
+          <!-- UCET Hazaribagh -->
+          <div class="glass-card rounded-3xl p-6 sm:p-7 relative border-l-4 border-l-sky-400">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/15 text-sky-300 border border-sky-500/30">
+                Undergraduate Degree â€¢ Pursuing
+              </span>
+              <span class="text-xs font-mono-code text-slate-400">Hazaribagh, Jharkhand</span>
+            </div>
+            <h4 class="text-xl font-bold font-display text-white">
+              Bachelor of Technology (B.Tech) â€” Information Technology
+            </h4>
+            <p class="text-sky-400 font-medium text-sm mt-1">
+              University College of Engineering and Technology (UCET), Hazaribagh
+            </p>
+            <p class="text-xs text-slate-400 mt-0.5">Affiliated to Vinoba Bhave University (VBU), Hazaribagh</p>
+            <p class="text-slate-300 text-sm leading-relaxed mt-3">
+              Focusing on Software Engineering, Data Structures &amp; Algorithms, Database Management Systems, Computer Networks, and Full-Stack Web Technologies. Active contributor to campus technical societies and student mentorship programs.
+            </p>
+          </div>
+
+          <!-- Government Polytechnic Dumka -->
+          <div class="glass-card rounded-3xl p-6 sm:p-7 relative border-l-4 border-l-indigo-400">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-indigo-500/15 text-indigo-300 border border-indigo-500/30">
+                Technical Diploma
+              </span>
+              <span class="text-xs font-mono-code text-slate-400">Dumka, Jharkhand</span>
+            </div>
+            <h4 class="text-xl font-bold font-display text-white">
+              Diploma in Engineering
+            </h4>
+            <p class="text-indigo-400 font-medium text-sm mt-1">
+              Government Polytechnic, Dumka
+            </p>
+            <p class="text-slate-300 text-sm leading-relaxed mt-3">
+              Built a strong practical engineering foundation in programming fundamentals, computer hardware &amp; networking, system design, and applied technical problem-solving before advancing to B.Tech in Information Technology.
+            </p>
+          </div>
+        </div>
+
+        <!-- Column 2: Practical Experience & Campus Leadership -->
+        <div class="space-y-6">
+          <h3 class="text-lg font-mono-code uppercase tracking-wider text-emerald-400 flex items-center gap-2">
+            <i class="fas fa-briefcase"></i> Development &amp; Leadership
+          </h3>
+
+          <!-- Full-Stack Product Engineering -->
+          <div class="glass-card rounded-3xl p-6 sm:p-7 relative border-l-4 border-l-emerald-400">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+                2025 â€“ Present
+              </span>
+              <span class="text-xs font-mono-code text-slate-400">Remote &amp; Hazaribagh</span>
+            </div>
+            <h4 class="text-xl font-bold font-display text-white">
+              Full-Stack Web Developer (Independent &amp; Client Projects)
+            </h4>
+            <p class="text-emerald-400 font-medium text-sm mt-1">
+              OSHN BLRREALTOR â€¢ Verma Brothers Fitness â€¢ Open-Source
+            </p>
+            <ul class="text-slate-300 text-sm space-y-2 mt-3 list-disc list-inside">
+              <li>Architected and deployed <strong class="text-white">OSHN BLRREALTOR</strong> using React 19, Tailwind v4, Express 5, and MongoDB across Vercel &amp; Render.</li>
+              <li>Built <strong class="text-white">Verma Brothers Fitness</strong> with an interactive Virtual AI Workout Coach and automated GitHub Actions deployment.</li>
+              <li>Developed a Python NMEA serial GPS &amp; IP geolocation tracker with Folium interactive map visualization.</li>
+            </ul>
+          </div>
+
+          <!-- Peer Mentoring & Tech Society -->
+          <div class="glass-card rounded-3xl p-6 sm:p-7 relative border-l-4 border-l-amber-400">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/15 text-amber-300 border border-amber-500/30">
+                Campus Leadership
+              </span>
+              <span class="text-xs font-mono-code text-slate-400">UCET Hazaribagh</span>
+            </div>
+            <h4 class="text-xl font-bold font-display text-white">
+              Student Mentor &amp; Technical Society Contributor
+            </h4>
+            <p class="text-amber-400 font-medium text-sm mt-1">
+              University College of Engineering and Technology (UCET), Hazaribagh
+            </p>
+            <p class="text-slate-300 text-sm leading-relaxed mt-3">
+              Actively engaged in peer mentoring and technical society initiatives at UCET Hazaribagh â€” guiding junior engineering students in web development workflows, Git/GitHub version control, and professional profile building.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         LINKEDIN & DIGITAL PROFILE REVIEW SECTION (ACTIONABLE AUDIT)
+         ====================================================================== -->
+    <section id="linkedin-review" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
+      <div class="glass-card rounded-3xl p-6 sm:p-10 border border-amber-500/30 relative overflow-hidden">
+        <div class="absolute -top-24 -right-24 w-72 h-72 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-slate-800">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-mono-code mb-3">
+              <i class="fab fa-linkedin"></i> PERSONALIZED LINKEDIN &amp; GITHUB PROFILE REVIEW
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-bold font-display text-white">
+              LinkedIn Profile Audit: <span class="text-gradient-gold">deepak-prasad-verma-872947250</span>
+            </h2>
+            <p class="text-slate-300 text-sm mt-1 max-w-2xl">
+              We analyzed your LinkedIn identity, GitHub (<code class="text-sky-300 font-mono-code">@deepakprasadverma</code>), LeetCode, and live Vercel/Render deployments. Check off the items below as you update your LinkedIn to boost your recruiter visibility to <strong class="text-emerald-400">100/100</strong>!
+            </p>
+          </div>
+
+          <!-- Score Meter Card -->
+          <div class="bg-slate-950/90 border border-slate-800 rounded-2xl p-5 min-w-[240px] shrink-0">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-xs font-mono-code text-slate-400">PROFILE STRENGTH</span>
+              <span id="audit-live-score" class="text-2xl font-bold font-display text-emerald-400">78/100</span>
+            </div>
+            <div class="w-full h-2.5 bg-slate-800 rounded-full overflow-hidden mb-2">
+              <div id="audit-score-bar" class="h-full bg-gradient-to-r from-amber-400 via-sky-400 to-emerald-400 rounded-full transition-all duration-500" style="width: 78%"></div>
+            </div>
+            <div class="text-[11px] text-slate-400">Tick the action items below to reach 100/100!</div>
+          </div>
+        </div>
+
+        <!-- Strengths vs Improvements Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8">
+
+          <!-- Left: What's Already Impressive + Copy-Paste LinkedIn Upgrades (7 cols) -->
+          <div class="lg:col-span-7 space-y-6">
+            <div>
+              <h3 class="text-base font-bold font-display text-emerald-400 flex items-center gap-2 mb-3">
+                <i class="fas fa-check-double"></i> What Already Stands Out On Your Profile
+              </h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="p-3.5 rounded-2xl bg-slate-900/70 border border-slate-800 text-xs text-slate-300">
+                  <strong class="text-white block mb-1">1. Real Production Projects</strong>
+                  Unlike most 2nd-year students, you have real full-stack apps (<span class="text-sky-300">OSHN BLRREALTOR</span> &amp; <span class="text-sky-300">Verma Brothers Fitness</span>) live on Vercel &amp; Render.
+                </div>
+                <div class="p-3.5 rounded-2xl bg-slate-900/70 border border-slate-800 text-xs text-slate-300">
+                  <strong class="text-white block mb-1">2. Dual Engineering Pedigree</strong>
+                  Having both a <span class="text-sky-300">Diploma (GP Dumka)</span> and <span class="text-sky-300">B.Tech IT (UCET Hazaribagh)</span> shows deep practical + theoretical commitment.
+                </div>
+                <div class="p-3.5 rounded-2xl bg-slate-900/70 border border-slate-800 text-xs text-slate-300">
+                  <strong class="text-white block mb-1">3. Multi-Platform Presence</strong>
+                  Cross-linking LinkedIn, GitHub, and LeetCode makes it easy for technical recruiters to verify your code.
+                </div>
+                <div class="p-3.5 rounded-2xl bg-slate-900/70 border border-slate-800 text-xs text-slate-300">
+                  <strong class="text-white block mb-1">4. Modern Stack Adoption</strong>
+                  Using <span class="text-sky-300">React 19, Tailwind CSS v4, Express 5, and MongoDB</span> puts your tech stack ahead of standard college syllabi.
+                </div>
+              </div>
+            </div>
+
+            <!-- Copy-Paste LinkedIn Headline Box -->
+            <div class="p-5 rounded-2xl bg-slate-900/90 border border-sky-500/30">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-mono-code text-sky-400 font-semibold uppercase">
+                  âœ¨ Recommended LinkedIn Headline (1-Click Copy)
+                </span>
+                <button
+                  onclick="copyText('Full-Stack MERN Developer (React, Node.js, MongoDB) | B.Tech IT @ UCET Hazaribagh | Python & DSA | Building Scalable Web Apps', 'Recommended LinkedIn Headline copied!')"
+                  class="px-3 py-1 rounded-lg bg-sky-500/20 hover:bg-sky-500/30 text-sky-300 text-xs font-semibold transition flex items-center gap-1.5"
+                >
+                  <i class="fas fa-copy"></i> Copy Headline
+                </button>
+              </div>
+              <p class="text-xs sm:text-sm text-white font-medium bg-slate-950 p-3 rounded-xl border border-slate-800">
+                Full-Stack MERN Developer (React, Node.js, MongoDB) | B.Tech IT @ UCET Hazaribagh | Python &amp; DSA | Building Scalable Web Apps
+              </p>
+            </div>
+
+            <!-- Copy-Paste LinkedIn About Summary Box -->
+            <div class="p-5 rounded-2xl bg-slate-900/90 border border-indigo-500/30">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-mono-code text-indigo-400 font-semibold uppercase">
+                  ðŸ“ Recommended LinkedIn "About" Summary (1-Click Copy)
+                </span>
+                <button
+                  onclick="copyText(`Hi, I'm Deepak Prasad Verma â€” a Full-Stack Web Developer and B.Tech Information Technology student at University College of Engineering and Technology (UCET), Hazaribagh (Diploma alumnus from Government Polytechnic, Dumka).\n\nI specialize in building fast, responsive, and production-ready web applications using the MERN stack (MongoDB, Express.js, React 19, Node.js) and Tailwind CSS, alongside automation and geospatial tools in Python.\n\nðŸš€ Recent Highlights:\nâ€¢ OSHN BLRREALTOR: Engineered a full-stack luxury real estate platform for Bengaluru properties with a React 19 frontend on Vercel and an Express + MongoDB REST API on Render.\nâ€¢ Verma Brothers Fitness: Built an interactive gym platform featuring a Virtual AI Workout Coach with automated GitHub Actions CI/CD.\nâ€¢ Hybrid Location Tracker: Developed a Python serial GPS (NMEA 0183) & IP geolocation tracker with interactive Folium mapping.\n\nðŸ’» Core Skills: JavaScript (ES6+), React.js, Node.js, Express.js, MongoDB, Tailwind CSS, Python, Java, Data Structures & Algorithms (DSA), Git/GitHub.\n\nðŸ“« Open to Software Engineering Internships, Full-Stack Developer roles, and freelance collaborations. Reach me at: deepakprasadverma90@gmail.com`, 'LinkedIn About Summary copied!')"
+                  class="px-3 py-1 rounded-lg bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-300 text-xs font-semibold transition flex items-center gap-1.5"
+                >
+                  <i class="fas fa-copy"></i> Copy About Bio
+                </button>
+              </div>
+              <p class="text-xs text-slate-300 bg-slate-950 p-3 rounded-xl border border-slate-800 leading-relaxed">
+                "Hi, I'm Deepak Prasad Verma â€” a Full-Stack Web Developer and B.Tech Information Technology student at UCET Hazaribagh (Diploma alumnus from Government Polytechnic, Dumka). I specialize in building production-ready web applications using the MERN stack (React 19, Node.js, Express, MongoDB) and Python..." <span class="text-indigo-400 font-semibold">(Click Copy for full recruiter-ready bio)</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Action Checklist (5 cols) -->
+          <div class="lg:col-span-5 bg-slate-950/80 border border-slate-800 rounded-2xl p-6">
+            <h3 class="text-base font-bold font-display text-amber-400 flex items-center gap-2 mb-4">
+              <i class="fas fa-tasks"></i> 6 Quick Fixes to Make Your LinkedIn 10/10
+            </h3>
+
+            <div class="space-y-3.5 text-xs sm:text-sm">
+              <label class="flex items-start gap-3 p-3 rounded-xl bg-slate-900/80 border border-slate-800 cursor-pointer hover:border-sky-500/40 transition">
+                <input type="checkbox" onchange="updateAuditScore()" class="audit-checkbox mt-1 accent-emerald-500 w-4 h-4 rounded" />
+                <span class="text-slate-300">
+                  <strong class="text-white block">1. Clean Custom LinkedIn URL Slug</strong>
+                  Change <code class="text-amber-300">.../in/deepak-prasad-verma-872947250</code> to <code class="text-emerald-300">.../in/deepakprasadverma</code> in LinkedIn <em>Public profile &amp; URL</em> settings to match your GitHub &amp; LeetCode handle.
+                </span>
+              </label>
+
+              <label class="flex items-start gap-3 p-3 rounded-xl bg-slate-900/80 border border-slate-800 cursor-pointer hover:border-sky-500/40 transition">
+                <input type="checkbox" onchange="updateAuditScore()" class="audit-checkbox mt-1 accent-emerald-500 w-4 h-4 rounded" />
+                <span class="text-slate-300">
+                  <strong class="text-white block">2. Unobstructed Headshot Photo</strong>
+                  Your current outdoor photo has tall grass stems across your face. Use a clear, unobstructed head-and-shoulders photo with a clean background for 3x higher recruiter click-through.
+                </span>
+              </label>
+
+              <label class="flex items-start gap-3 p-3 rounded-xl bg-slate-900/80 border border-slate-800 cursor-pointer hover:border-sky-500/40 transition">
+                <input type="checkbox" onchange="updateAuditScore()" class="audit-checkbox mt-1 accent-emerald-500 w-4 h-4 rounded" />
+                <span class="text-slate-300">
+                  <strong class="text-white block">3. Pin This Portfolio &amp; Live Apps in "Featured"</strong>
+                  Add this Portfolio Website, <span class="text-sky-300">oshn-blr-realtor.vercel.app</span>, and <span class="text-sky-300">verma-brothers-fitness.vercel.app</span> to your LinkedIn <strong>Featured</strong> section with screenshots.
+                </span>
+              </label>
+
+              <label class="flex items-start gap-3 p-3 rounded-xl bg-slate-900/80 border border-slate-800 cursor-pointer hover:border-sky-500/40 transition">
+                <input type="checkbox" onchange="updateAuditScore()" class="audit-checkbox mt-1 accent-emerald-500 w-4 h-4 rounded" />
+                <span class="text-slate-300">
+                  <strong class="text-white block">4. Format Punctuation in Bio</strong>
+                  Replace exclamation marks (<code class="text-amber-300">!</code>) in your GitHub/LinkedIn bio with clean vertical pipes (<code class="text-emerald-300">|</code>) or bullets (<code class="text-emerald-300">â€¢</code>).
+                </span>
+              </label>
+
+              <label class="flex items-start gap-3 p-3 rounded-xl bg-slate-900/80 border border-slate-800 cursor-pointer hover:border-sky-500/40 transition">
+                <input type="checkbox" onchange="updateAuditScore()" class="audit-checkbox mt-1 accent-emerald-500 w-4 h-4 rounded" />
+                <span class="text-slate-300">
+                  <strong class="text-white block">5. Consolidate Duplicate GitHub Repo</strong>
+                  Keep <code class="text-emerald-300">verma_-brothers-fitness</code> (which has the Vercel link &amp; CI workflow) and archive or merge the duplicate <code class="text-amber-300">verma-brothers-fitness</code> repo.
+                </span>
+              </label>
+
+              <label class="flex items-start gap-3 p-3 rounded-xl bg-slate-900/80 border border-slate-800 cursor-pointer hover:border-sky-500/40 transition">
+                <input type="checkbox" onchange="updateAuditScore()" class="audit-checkbox mt-1 accent-emerald-500 w-4 h-4 rounded" />
+                <span class="text-slate-300">
+                  <strong class="text-white block">6. Fix School Spelling on LeetCode</strong>
+                  Update <code class="text-amber-300">"Collage"</code> to <code class="text-emerald-300">"University College of Engineering and Technology, Hazaribagh"</code> on your LeetCode profile and solve 25+ Easy/Medium DSA problems to populate your graph.
+                </span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         CONTACT & HIRE ME SECTION
+         ====================================================================== -->
+    <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+
+        <!-- Left Contact Info (5 cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          <div>
+            <span class="text-xs font-mono-code uppercase tracking-widest text-sky-400 block mb-2">
+              // 05. GET IN TOUCH
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-bold font-display text-white">
+              Let's Build Something <span class="text-gradient-primary">Extraordinary</span>
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
+              Looking for a dedicated Full-Stack Intern, React/MERN Developer, or freelance engineer for your next web platform? Feel free to reach out directly!
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            <!-- Email Card -->
+            <div class="glass-card rounded-2xl p-4 flex items-center justify-between">
+              <div class="flex items-center gap-3.5 overflow-hidden">
+                <div class="w-11 h-11 rounded-xl bg-sky-500/15 border border-sky-500/30 flex items-center justify-center text-sky-400 shrink-0">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="truncate">
+                  <div class="text-xs text-slate-400">Direct Email</div>
+                  <a href="mailto:deepakprasadverma90@gmail.com" class="text-sm font-semibold text-white hover:text-sky-400 truncate block">
+                    deepakprasadverma90@gmail.com
+                  </a>
+                </div>
+              </div>
+              <button
+                onclick="copyText('deepakprasadverma90@gmail.com', 'Email copied!')"
+                class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs text-sky-300 font-mono-code shrink-0"
+              >
+                Copy
+              </button>
+            </div>
+
+            <!-- LinkedIn Card -->
+            <a
+              href="https://www.linkedin.com/in/deepak-prasad-verma-872947250/"
+              target="_blank"
+              rel="noopener"
+              class="glass-card rounded-2xl p-4 flex items-center justify-between group"
+            >
+              <div class="flex items-center gap-3.5">
+                <div class="w-11 h-11 rounded-xl bg-indigo-500/15 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
+                  <i class="fab fa-linkedin-in text-lg"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-slate-400">Professional Network</div>
+                  <div class="text-sm font-semibold text-white group-hover:text-sky-400 transition">
+                    linkedin.com/in/deepak-prasad-verma-872947250
+                  </div>
+                </div>
+              </div>
+              <i class="fas fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-sky-400"></i>
+            </a>
+
+            <!-- GitHub Card -->
+            <a
+              href="https://github.com/deepakprasadverma"
+              target="_blank"
+              rel="noopener"
+              class="glass-card rounded-2xl p-4 flex items-center justify-between group"
+            >
+              <div class="flex items-center gap-3.5">
+                <div class="w-11 h-11 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+                  <i class="fab fa-github text-lg"></i>
+                </div>
+                <div>
+                  <div class="text-xs text-slate-400">Code &amp; Repositories</div>
+                  <div class="text-sm font-semibold text-white group-hover:text-emerald-400 transition">
+                    github.com/deepakprasadverma
+                  </div>
+                </div>
+              </div>
+              <i class="fas fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-emerald-400"></i>
+            </a>
+
+            <!-- Location Card -->
+            <div class="glass-card rounded-2xl p-4 flex items-center gap-3.5">
+              <div class="w-11 h-11 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                <i class="fas fa-location-dot text-lg"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400">Base Location</div>
+                <div class="text-sm font-semibold text-white">
+                  Hazaribagh, Jharkhand, India (Open to Remote &amp; Relocation)
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Contact Form (7 cols) -->
+        <div class="lg:col-span-7">
+          <form onsubmit="handleContactSubmit(event)" class="glass-card rounded-3xl p-6 sm:p-8 space-y-5">
+            <h3 class="text-xl font-bold font-display text-white mb-1">Send a Direct Message</h3>
+            <p class="text-xs text-slate-400 mb-4">
+              Fills and launches a direct email to <span class="text-sky-400 font-mono-code">deepakprasadverma90@gmail.com</span>.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="contact-name" class="block text-xs font-mono-code uppercase text-slate-300 mb-2">Your Name *</label>
+                <input
+                  id="contact-name"
+                  type="text"
+                  required
+                  placeholder="e.g. Rahul Sharma"
+                  class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white text-sm focus:outline-none focus:border-sky-400 transition"
+                />
+              </div>
+              <div>
+                <label for="contact-email" class="block text-xs font-mono-code uppercase text-slate-300 mb-2">Your Email *</label>
+                <input
+                  id="contact-email"
+                  type="email"
+                  required
+                  placeholder="e.g. recruiter@company.com"
+                  class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white text-sm focus:outline-none focus:border-sky-400 transition"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="contact-subject" class="block text-xs font-mono-code uppercase text-slate-300 mb-2">Subject *</label>
+              <input
+                id="contact-subject"
+                type="text"
+                required
+                placeholder="e.g. Full-Stack Internship / Freelance Project Inquiry"
+                class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white text-sm focus:outline-none focus:border-sky-400 transition"
+              />
+            </div>
+
+            <div>
+              <label for="contact-message" class="block text-xs font-mono-code uppercase text-slate-300 mb-2">Message *</label>
+              <textarea
+                id="contact-message"
+                rows="4"
+                required
+                placeholder="Hi Deepak, we loved your OSHN BLRREALTOR project and would like to connect regarding..."
+                class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700/80 text-white text-sm focus:outline-none focus:border-sky-400 transition resize-y"
+              ></textarea>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+              <button
+                type="submit"
+                class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-sky-500 to-indigo-600 text-white keep-white font-semibold text-sm shadow-lg shadow-sky-500/25 hover:opacity-95 transition flex items-center gap-2"
+              >
+                <i class="fas fa-paper-plane"></i>
+                <span>Send Message to Deepak</span>
+              </button>
+
+              <a
+                href="https://www.linkedin.com/in/deepak-prasad-verma-872947250/"
+                target="_blank"
+                rel="noopener"
+                class="text-xs font-mono-code text-sky-400 hover:underline"
+              >
+                Or message directly on LinkedIn â†’
+              </a>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="border-t border-slate-800/80 bg-slate-950/80 py-10 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-sky-400 to-indigo-600 flex items-center justify-center font-display font-bold text-white text-xs">
+          DPV
+        </div>
+        <span class="text-xs sm:text-sm text-slate-400">
+          Â© 2026 <strong class="text-white">Deepak Prasad Verma</strong>. Crafted with precision in Hazaribagh, Jharkhand.
+        </span>
+      </div>
+
+      <div class="flex items-center gap-5 text-slate-400 text-base">
+        <a href="https://github.com/deepakprasadverma" target="_blank" rel="noopener" class="hover:text-white transition" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/deepak-prasad-verma-872947250/" target="_blank" rel="noopener" class="hover:text-sky-400 transition" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://leetcode.com/u/deepakprasadverma/" target="_blank" rel="noopener" class="hover:text-amber-400 transition" aria-label="LeetCode"><i class="fas fa-code"></i></a>
+        <a href="https://www.instagram.com/mr_prasad_verma" target="_blank" rel="noopener" class="hover:text-pink-400 transition" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.snapchat.com/add/deepak_prasad03" target="_blank" rel="noopener" class="hover:text-yellow-400 transition" aria-label="Snapchat"><i class="fab fa-snapchat"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       PROJECT ARCHITECTURE INSPECTOR MODAL
+       ======================================================================== -->
+  <div
+    id="project-modal"
+    onclick="if(event.target === this) closeProjectModal()"
+    class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/80 backdrop-blur-md p-4 overflow-y-auto"
+  >
+    <div class="glass-card rounded-3xl max-w-2xl w-full p-6 sm:p-8 relative border border-slate-700 shadow-2xl my-8">
+      <button
+        onclick="closeProjectModal()"
+        class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center absolute top-5 right-5"
+        aria-label="Close Modal"
+      >
+        <i class="fas fa-times"></i>
+      </button>
+      <div id="project-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       ATS-READY RESUME / CV MODAL (PRINTABLE PDF)
+       ======================================================================== -->
+  <div
+    id="resume-modal"
+    onclick="if(event.target === this) closeResumeModal()"
+    class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/85 backdrop-blur-md p-4 overflow-y-auto"
+  >
+    <div class="bg-white text-slate-900 rounded-2xl max-w-3xl w-full p-6 sm:p-10 shadow-2xl my-8 relative">
+      <!-- Top Action Bar (Hidden when printing) -->
+      <div class="no-print flex flex-wrap items-center justify-between gap-3 pb-5 mb-6 border-b border-slate-200">
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-1 rounded-md bg-sky-100 text-sky-800 font-mono text-xs font-semibold">ATS-Optimized Resume</span>
+          <span class="text-xs text-slate-500">Ready to print or save as PDF</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button
+            onclick="window.print()"
+            class="px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-semibold text-xs flex items-center gap-1.5 shadow"
+          >
+            <i class="fas fa-print"></i> Print / Save as PDF
+          </button>
+          <button
+            onclick="closeResumeModal()"
+            class="px-3 py-2 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 font-semibold text-xs"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+
+      <!-- Printable Resume Content -->
+      <div class="space-y-5 text-slate-800">
+        <div class="border-b-2 border-slate-900 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">DEEPAK PRASAD VERMA</h1>
+            <p class="text-sm font-semibold text-sky-700">Full-Stack MERN Developer &amp; Information Technology Undergraduate</p>
+          </div>
+          <div class="text-xs text-slate-600 space-y-0.5 sm:text-right">
+            <div>Hazaribagh, Jharkhand, India</div>
+            <div>Email: deepakprasadverma90@gmail.com</div>
+            <div>GitHub: github.com/deepakprasadverma</div>
+            <div>LinkedIn: linkedin.com/in/deepak-prasad-verma-872947250</div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Education</h2>
+          <div class="space-y-2 text-xs sm:text-sm">
+            <div class="flex justify-between">
+              <div>
+                <strong class="text-slate-900">University College of Engineering and Technology (UCET), Hazaribagh</strong>
+                <div class="text-slate-600">B.Tech in Information Technology (Vinoba Bhave University)</div>
+              </div>
+              <span class="text-slate-600 font-medium shrink-0">Pursuing (2nd Year)</span>
+            </div>
+            <div class="flex justify-between">
+              <div>
+                <strong class="text-slate-900">Government Polytechnic, Dumka</strong>
+                <div class="text-slate-600">Diploma in Engineering</div>
+              </div>
+              <span class="text-slate-600 font-medium shrink-0">Completed</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Technical Skills</h2>
+          <div class="text-xs sm:text-sm space-y-1">
+            <div><strong class="text-slate-900">Frontend:</strong> React 19, Vite, JavaScript (ES6+), Tailwind CSS v4, HTML5, CSS3, React Router v7, HTML5 Canvas</div>
+            <div><strong class="text-slate-900">Backend &amp; DB:</strong> Node.js, Express.js v5, MongoDB, Mongoose, RESTful APIs, CORS</div>
+            <div><strong class="text-slate-900">Languages &amp; Core:</strong> Python, Java, Data Structures &amp; Algorithms (DSA), Folium GIS, PySerial, PyNMEA2</div>
+            <div><strong class="text-slate-900">Cloud &amp; Tools:</strong> Git, GitHub, GitHub Actions CI/CD, Vercel, Render.com, VS Code</div>
+          </div>
+        </div>
+
+        <!-- Projects -->
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Key Engineering Projects</h2>
+          <div class="space-y-3 text-xs sm:text-sm">
+            <div>
+              <div class="flex justify-between">
+                <strong class="text-slate-900">OSHN BLRREALTOR â€” Full-Stack Luxury Real Estate Platform</strong>
+                <span class="text-sky-700 font-mono text-xs">oshn-blr-realtor.vercel.app</span>
+              </div>
+              <p class="text-slate-600 mt-0.5">
+                Engineered a full-stack property discovery platform for Bengaluru using React 19, Tailwind CSS v4, Node.js, Express 5, and MongoDB. Built an Admin dashboard, Context state management, and automated deployments across Vercel and Render.
+              </p>
+            </div>
+
+            <div>
+              <div class="flex justify-between">
+                <strong class="text-slate-900">Verma Brothers Fitness â€” AI-Powered Gym Web Platform</strong>
+                <span class="text-sky-700 font-mono text-xs">verma-brothers-fitness.vercel.app</span>
+              </div>
+              <p class="text-slate-600 mt-0.5">
+                Developed a responsive fitness web portal for a Hazaribagh gym featuring an interactive Virtual AI Workout Coach that generates tailored training splits based on user goals and experience levels. Automated CI/CD via GitHub Actions.
+              </p>
+            </div>
+
+            <div>
+              <div class="flex justify-between">
+                <strong class="text-slate-900">Hybrid GPS &amp; IP Geolocation Tracker</strong>
+                <span class="text-sky-700 font-mono text-xs">github.com/deepakprasadverma/location-tracker</span>
+              </div>
+              <p class="text-slate-600 mt-0.5">
+                Built a Python geolocation tool that reads live $GPRMC and $GPGGA NMEA satellite streams from hardware GPS receivers via PySerial, with automatic fallback to IP geolocation and interactive HTML map generation using Folium.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Leadership -->
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 border-b border-slate-300 pb-1 mb-2">Leadership &amp; Extracurriculars</h2>
+          <ul class="list-disc list-inside text-xs sm:text-sm text-slate-600 space-y-1">
+            <li><strong class="text-slate-900">Peer Mentor &amp; Technical Society Member (UCET Hazaribagh):</strong> Conducted student professional development and technical guidance sessions for engineering peers.</li>
+            <li><strong class="text-slate-900">Competitive Programming &amp; Open Source:</strong> Active problem solver on LeetCode (@deepakprasadverma) and open-source creator on GitHub.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       TOAST NOTIFICATION
+       ======================================================================== -->
+  <div
+    id="toast-notification"
+    class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none"
+  >
+    <div class="px-5 py-3.5 rounded-2xl bg-slate-900/95 border border-sky-400/50 text-white shadow-2xl flex items-center gap-3">
+      <i class="fas fa-check-circle text-emerald-400 text-lg"></i>
+      <span id="toast-message" class="text-xs sm:text-sm font-medium">Copied to clipboard!</span>
+    </div>
+  </div>
+
+  <!-- Interactive Engine Script -->
+  <script>
+/* ==========================================================================
+   DEEPAK PRASAD VERMA â€” INTERACTIVE PORTFOLIO ENGINE
+   ========================================================================== */
+
+// 1. Project Deep-Dive Data for Architecture Inspector Modal
+const PROJECTS_DATA = {
+  oshn: {
+    title: "OSHN BLRREALTOR â€” Luxury Real Estate Platform",
+    subtitle: "Full-Stack MERN Application â€¢ Deployed on Vercel & Render",
+    category: "Full-Stack MERN",
+    liveUrl: "https://oshn-blr-realtor.vercel.app",
+    backendUrl: "https://oshn-blr-realtor.onrender.com",
+    repoUrl: "https://github.com/deepakprasadverma/oshn-blr-realtor",
+    status: "Production Live",
+    description:
+      "A comprehensive full-stack real estate platform engineered for discovering luxury apartments, premium villas, and RERA-approved investment plots across Bengaluru. Built with React 19, Vite, and Tailwind CSS v4 on the frontend, paired with a dedicated Node.js + Express 5 + MongoDB backend hosted on Render.",
+    architecture: [
+      "Frontend SPA built with React 19, React Router v7, and Tailwind CSS v4 deployed on Vercel with custom SPA routing rules.",
+      "Dedicated Admin Dashboard (/src/admin) and Context API state management for dynamic property listings and inquiries.",
+      "RESTful Backend powered by Node.js, Express 5, and Mongoose ORM connected to MongoDB Atlas.",
+      "Includes real-time MongoDB diagnostic health monitoring (/system-stats) and automated Render.com deployment via render.yaml."
+    ],
+    techStack: ["React 19", "Vite 8", "Tailwind CSS v4", "Node.js", "Express 5", "MongoDB", "Mongoose", "React Router v7", "Vercel", "Render"]
+  },
+  fitness: {
+    title: "Verma Brothers Fitness â€” AI-Powered Gym Platform",
+    subtitle: "Interactive Client Web App + Virtual AI Workout Coach",
+    category: "Frontend & AI UX",
+    liveUrl: "https://verma-brothers-fitness.vercel.app",
+    repoUrl: "https://github.com/deepakprasadverma/verma_-brothers-fitness",
+    status: "Production Live",
+    description:
+      "A high-converting, modern web platform built for Hazaribagh's premier fitness center. Features an interactive Virtual AI Workout Coach that dynamically generates personalized daily training splits based on user goals (Weight Loss, Muscle Hypertrophy, Powerlifting, Endurance) and experience levels.",
+    architecture: [
+      "Interactive AI Workout Coach engine that computes tailored exercise routines, sets, reps, and rest intervals on the client.",
+      "Responsive dark-themed athletic UI built with Tailwind CSS, Oswald & Poppins typography, and smooth scroll navigation.",
+      "Automated CI/CD deployment pipeline using GitHub Actions (static.yml) and Vercel edge hosting.",
+      "Includes membership tier comparisons, facility showcases (CrossFit zone, imported bio-mechanical machines), and lead capture."
+    ],
+    techStack: ["HTML5", "Tailwind CSS", "JavaScript (ES6+)", "AI Coach Engine", "FontAwesome", "GitHub Actions CI/CD", "Vercel"]
+  },
+  tracker: {
+    title: "Hybrid GPS & IP Geolocation Tracker",
+    subtitle: "Hardware Serial NMEA Stream Parser + Interactive Folium GIS Mapper",
+    category: "Python & IoT",
+    liveUrl: "https://github.com/deepakprasadverma/location-tracker",
+    repoUrl: "https://github.com/deepakprasadverma/location-tracker",
+    status: "Open Source Utility",
+    description:
+      "A dual-mode geolocation tracking system written in Python that interfaces directly with physical GPS hardware receivers over serial ports (COM3 / /dev/ttyUSB0) and seamlessly falls back to IP-based geolocation when hardware is unavailable.",
+    architecture: [
+      "Hardware GPS Mode: Connects via PySerial at 9600 baud and parses live $GPRMC and $GPGGA NMEA 0183 satellite sentences using PyNMEA2.",
+      "Automatic Failover: Detects serial hardware availability and switches to REST IP-Geolocation (ip-api.com) with 10-second live polling.",
+      "Interactive Map Generation: Uses Folium (Leaflet.js wrapper) to plot real-time coordinates, city/country popups, and markers into live_map.html.",
+      "Cross-platform compatibility supporting both Windows COM ports and Linux/macOS ttyUSB interfaces."
+    ],
+    techStack: ["Python 3", "Folium (Leaflet GIS)", "PySerial", "PyNMEA2", "Requests", "REST API", "Hardware Interfacing"]
+  },
+  bawal: {
+    title: "Bawal Mode â€” Dual-Canvas Matrix & Particle FX Engine",
+    subtitle: "High-FPS Interactive Visual Synthesizer & Physics Particle System",
+    category: "Creative Coding",
+    liveUrl: "#bawal-demo",
+    repoUrl: "https://github.com/deepakprasadverma/Bawal",
+    status: "Interactive Canvas Demo",
+    description:
+      "An experimental creative-coding web application featuring a dual-layer HTML5 Canvas rendering pipeline. Combines a cyberpunk Matrix digital rain background with an interactive physics-driven particle explosion engine ('Auto Boom' & tap-to-detonate).",
+    architecture: [
+      "Layer 1 (#rain canvas): Renders continuous Devanagari + alphanumeric Matrix rain streams with alpha trail fade.",
+      "Layer 2 (#fx canvas): Handles multi-particle radial burst physics, velocity decay, gravity, and neon HSL color cycling.",
+      "Mobile-first safe-area-inset viewport adaptation with glassmorphic floating HUD controls.",
+      "Click 'Launch Bawal FX' right here on this portfolio to experience the particle engine live!"
+    ],
+    techStack: ["HTML5 Canvas 2D", "Vanilla JavaScript", "Particle Physics", "RequestAnimationFrame", "CSS Glassmorphism"]
+  }
+};
+
+// 2. Typewriter Role Switcher
+const ROLES = [
+  "Full-Stack MERN Developer",
+  "IT Engineering Student @ UCET Hazaribagh",
+  "React 19 & Node.js Web Architect",
+  "Python & Geo-Tracking Builder",
+  "Problem Solver & Tech Peer Mentor"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function initTypewriter() {
+  const el = document.getElementById("typewriter-text");
+  if (!el) return;
+
+  const currentRole = ROLES[roleIndex];
+  if (isDeleting) {
+    charIndex--;
+    el.textContent = currentRole.substring(0, charIndex);
+  } else {
+    charIndex++;
+    el.textContent = currentRole.substring(0, charIndex);
+  }
+
+  let speed = isDeleting ? 35 : 70;
+
+  if (!isDeleting && charIndex === currentRole.length) {
+    speed = 2000;
+    isDeleting = true;
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    roleIndex = (roleIndex + 1) % ROLES.length;
+    speed = 350;
+  }
+
+  setTimeout(initTypewriter, speed);
+}
+
+// 3. Interactive Developer Terminal (dpv-shell)
+const TERMINAL_COMMANDS = {
+  help: () => `
+<div class="space-y-1 text-slate-300">
+  <div class="text-sky-400 font-semibold">Available Commands in dpv-shell v2.6:</div>
+  <div><span class="text-emerald-400 font-bold w-24 inline-block">about</span>     â†’ Who is Deepak Prasad Verma?</div>
+  <div><span class="text-emerald-400 font-bold w-24 inline-block">skills</span>    â†’ View full-stack & programming arsenal</div>
+  <div><span class="text-emerald-400 font-bold w-24 inline-block">projects</span>  â†’ List deployed apps & GitHub repositories</div>
+  <div><span class="text-emerald-400 font-bold w-24 inline-block">education</span> â†’ Academic credentials (UCET & Govt Polytechnic)</div>
+  <div><span class="text-emerald-400 font-bold w-24 inline-block">audit</span>     â†’ View LinkedIn Profile Review & Growth Score</div>
+  <div><span class="text-emerald-400 font-bold w-24 inline-block">contact</span>   â†’ Email, LinkedIn, GitHub & LeetCode links</div>
+  <div><span class="text-pink-400 font-bold w-24 inline-block">bawal</span>     â†’ Trigger Bawal Mode Fireworks FX! ðŸŽ†</div>
+  <div><span class="text-amber-400 font-bold w-24 inline-block">clear</span>     â†’ Clear terminal output</div>
+</div>`,
+  about: () => `
+<div class="text-slate-300 space-y-1">
+  <div><span class="text-sky-400 font-semibold">Name:</span> Deepak Prasad Verma (@deepakprasadverma)</div>
+  <div><span class="text-sky-400 font-semibold">Role:</span> Full-Stack Web Developer & Information Technology Undergraduate</div>
+  <div><span class="text-sky-400 font-semibold">Location:</span> Hazaribagh, Jharkhand, India ðŸ‡®ðŸ‡³</div>
+  <div><span class="text-sky-400 font-semibold">Focus:</span> Building production-grade MERN web apps, AI-assisted user experiences, and Python automation tools.</div>
+</div>`,
+  skills: () => `
+<div class="text-slate-300 space-y-1">
+  <div><span class="text-indigo-400 font-semibold">[Frontend]</span> React 19, Vite, JavaScript (ES6+), Tailwind CSS v4, HTML5, CSS3, Canvas 2D</div>
+  <div><span class="text-emerald-400 font-semibold">[Backend]</span>  Node.js, Express 5, MongoDB, Mongoose, REST APIs, CORS</div>
+  <div><span class="text-amber-400 font-semibold">[Core/IoT]</span> Python, Java, DSA, Folium GIS, PySerial, PyNMEA2 (GPS Hardware)</div>
+  <div><span class="text-sky-400 font-semibold">[DevOps]</span>   Vercel, Render.com, GitHub Actions CI/CD, Git, GitHub Pages</div>
+</div>`,
+  projects: () => `
+<div class="text-slate-300 space-y-1.5">
+  <div>1. <a href="https://oshn-blr-realtor.vercel.app" target="_blank" class="text-sky-400 underline font-semibold">OSHN BLRREALTOR</a> â€” Full-Stack Luxury Real Estate Portal (React 19 + Node + MongoDB)</div>
+  <div>2. <a href="https://verma-brothers-fitness.vercel.app" target="_blank" class="text-emerald-400 underline font-semibold">Verma Brothers Fitness</a> â€” Hazaribagh Gym Platform with Virtual AI Coach</div>
+  <div>3. <a href="https://github.com/deepakprasadverma/location-tracker" target="_blank" class="text-amber-400 underline font-semibold">Hybrid Location Tracker</a> â€” Python Serial NMEA GPS + IP Folium Map Engine</div>
+  <div>4. <a href="https://github.com/deepakprasadverma/Bawal" target="_blank" class="text-pink-400 underline font-semibold">Bawal Mode</a> â€” Dual-Canvas Matrix Rain & Particle FX Engine</div>
+</div>`,
+  education: () => `
+<div class="text-slate-300 space-y-1.5">
+  <div>ðŸŽ“ <span class="text-white font-semibold">B.Tech in Information Technology</span> â€” University College of Engineering and Technology (UCET), Hazaribagh (Vinoba Bhave University)</div>
+  <div>ðŸ›ï¸ <span class="text-white font-semibold">Diploma in Engineering</span> â€” Government Polytechnic, Dumka, Jharkhand</div>
+</div>`,
+  audit: () => {
+    const auditSection = document.getElementById("linkedin-review");
+    if (auditSection) auditSection.scrollIntoView({ behavior: "smooth" });
+    return `<div class="text-emerald-400">âœ” Scrolled to LinkedIn Profile Review & Optimization Roadmap section below! (Current Profile Score: 78/100 â†’ Target: 98/100)</div>`;
+  },
+  contact: () => `
+<div class="text-slate-300 space-y-1">
+  <div>ðŸ“§ <span class="text-sky-400">Email:</span> <a href="mailto:deepakprasadverma90@gmail.com" class="underline">deepakprasadverma90@gmail.com</a></div>
+  <div>ðŸ’¼ <span class="text-sky-400">LinkedIn:</span> <a href="https://www.linkedin.com/in/deepak-prasad-verma-872947250/" target="_blank" class="underline">linkedin.com/in/deepak-prasad-verma-872947250</a></div>
+  <div>ðŸ™ <span class="text-sky-400">GitHub:</span> <a href="https://github.com/deepakprasadverma" target="_blank" class="underline">github.com/deepakprasadverma</a></div>
+  <div>ðŸ§© <span class="text-sky-400">LeetCode:</span> <a href="https://leetcode.com/u/deepakprasadverma/" target="_blank" class="underline">leetcode.com/u/deepakprasadverma</a></div>
+</div>`,
+  bawal: () => {
+    triggerBawalMode();
+    return `<div class="text-pink-400 font-bold">ðŸ’¥ BAWAL MODE ACTIVATED! Launching cyberpunk fireworks across your screen...</div>`;
+  }
+};
+
+function runTerminalCommand(rawCmd) {
+  const output = document.getElementById("terminal-output");
+  const input = document.getElementById("terminal-input");
+  if (!output) return;
+
+  const cmd = (rawCmd || "").trim().toLowerCase();
+  if (!cmd) return;
+
+  if (cmd === "clear") {
+    output.innerHTML = `<div class="text-slate-400 text-xs">Terminal cleared. Type <span class="text-emerald-400">'help'</span> for available commands.</div>`;
+    if (input) input.value = "";
+    return;
+  }
+
+  const promptLine = document.createElement("div");
+  promptLine.className = "mt-3";
+  promptLine.innerHTML = `<span class="text-emerald-400 font-semibold">deepak@ucet-dev</span>:<span class="text-sky-400">~</span>$ <span class="text-white">${escapeHtml(cmd)}</span>`;
+  output.appendChild(promptLine);
+
+  const responseLine = document.createElement("div");
+  responseLine.className = "mt-1 pl-2 border-l-2 border-slate-700/80";
+
+  if (TERMINAL_COMMANDS[cmd]) {
+    responseLine.innerHTML = TERMINAL_COMMANDS[cmd]();
+  } else {
+    responseLine.innerHTML = `<span class="text-rose-400">Command not found: '${escapeHtml(cmd)}'. Type <span class="text-emerald-400 underline cursor-pointer" onclick="runTerminalCommand('help')">help</span> for a list of commands.</span>`;
+  }
+
+  output.appendChild(responseLine);
+  output.scrollTop = output.scrollHeight;
+  if (input) input.value = "";
+}
+
+function escapeHtml(str) {
+  return str.replace(/[&<>"']/g, (m) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
+  })[m]);
+}
+
+// 4. Project Filtering
+function filterProjects(category, btnElement) {
+  const buttons = document.querySelectorAll(".filter-btn");
+  buttons.forEach((b) => b.classList.remove("active"));
+  if (btnElement) btnElement.classList.add("active");
+
+  const cards = document.querySelectorAll(".project-card");
+  cards.forEach((card) => {
+    const cats = (card.getAttribute("data-category") || "").split(" ");
+    if (category === "all" || cats.includes(category)) {
+      card.style.display = "flex";
+      card.classList.add("animate-fadeIn");
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+
+// 5. Project Architecture Modal
+function openProjectModal(projectId) {
+  const data = PROJECTS_DATA[projectId];
+  if (!data) return;
+
+  const modal = document.getElementById("project-modal");
+  const content = document.getElementById("project-modal-body");
+  if (!modal || !content) return;
+
+  const archList = data.architecture
+    .map(
+      (item) =>
+        `<li class="flex items-start gap-2.5 text-slate-300 text-sm"><i class="fas fa-check-circle text-emerald-400 mt-1 shrink-0"></i><span>${item}</span></li>`
+    )
+    .join("");
+
+  const techBadges = data.techStack
+    .map(
+      (t) =>
+        `<span class="px-3 py-1 rounded-full text-xs font-medium bg-sky-500/10 text-sky-300 border border-sky-500/25">${t}</span>`
+    )
+    .join("");
+
+  const liveButton =
+    data.liveUrl === "#bawal-demo"
+      ? `<button onclick="closeProjectModal(); triggerBawalMode();" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold text-sm hover:opacity-95 transition flex items-center gap-2"><i class="fas fa-bolt"></i> Launch Bawal FX Live</button>`
+      : `<a href="${data.liveUrl}" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-sky-500 to-indigo-600 text-white font-semibold text-sm hover:opacity-95 transition flex items-center gap-2"><i class="fas fa-external-link-alt"></i> Open Live Deployment</a>`;
+
+  const backendButton = data.backendUrl
+    ? `<a href="${data.backendUrl}" target="_blank" rel="noopener" class="px-4 py-2.5 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 font-semibold text-sm hover:bg-emerald-500/25 transition flex items-center gap-2"><i class="fas fa-server"></i> Render Backend API</a>`
+    : "";
+
+  content.innerHTML = `
+    <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+      <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">${data.status}</span>
+      <span class="text-xs font-mono-code text-slate-400">${data.category}</span>
+    </div>
+    <h3 class="text-2xl md:text-3xl font-bold text-white font-display mb-1">${data.title}</h3>
+    <p class="text-sky-400 text-sm font-medium mb-4">${data.subtitle}</p>
+    <p class="text-slate-300 text-sm leading-relaxed mb-6">${data.description}</p>
+
+    <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 mb-6">
+      <h4 class="text-xs font-mono-code uppercase tracking-wider text-sky-400 mb-3">System Architecture & Engineering Highlights</h4>
+      <ul class="space-y-2.5">${archList}</ul>
+    </div>
+
+    <div class="mb-6">
+      <h4 class="text-xs font-mono-code uppercase tracking-wider text-slate-400 mb-2.5">Technologies & Cloud Stack</h4>
+      <div class="flex flex-wrap gap-2">${techBadges}</div>
+    </div>
+
+    <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-slate-800">
+      ${liveButton}
+      ${backendButton}
+      <a href="${data.repoUrl}" target="_blank" rel="noopener" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm transition flex items-center gap-2">
+        <i class="fab fa-github"></i> Source Code
+      </a>
+    </div>
+  `;
+
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+}
+
+function closeProjectModal() {
+  const modal = document.getElementById("project-modal");
+  if (modal) {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+  }
+}
+
+// 6. Bawal Mode Tribute â€” Interactive Fireworks & Matrix Burst Canvas Overlay
+let bawalTimeout = null;
+function triggerBawalMode() {
+  const existing = document.getElementById("bawal-canvas-overlay");
+  if (existing) existing.remove();
+
+  const canvas = document.createElement("canvas");
+  canvas.id = "bawal-canvas-overlay";
+  canvas.style.position = "fixed";
+  canvas.style.inset = "0";
+  canvas.style.width = "100vw";
+  canvas.style.height = "100vh";
+  canvas.style.pointerEvents = "none";
+  canvas.style.zIndex = "9999";
+  document.body.appendChild(canvas);
+
+  const ctx = canvas.getContext("2d");
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const particles = [];
+  const colors = ["#ff2fd4", "#38bdf8", "#10b981", "#fbbf24", "#818cf8", "#f43f5e"];
+
+  function createBurst(x, y) {
+    for (let i = 0; i < 65; i++) {
+      const angle = (Math.PI * 2 * i) / 65 + (Math.random() - 0.5) * 0.2;
+      const speed = 2 + Math.random() * 7.5;
+      particles.push({
+        x,
+        y,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        alpha: 1,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        size: 2 + Math.random() * 3.5
+      });
+    }
+  }
+
+  // Launch multiple celebratory bursts
+  createBurst(canvas.width * 0.25, canvas.height * 0.35);
+  createBurst(canvas.width * 0.75, canvas.height * 0.35);
+  createBurst(canvas.width * 0.5, canvas.height * 0.25);
+  setTimeout(() => createBurst(canvas.width * 0.35, canvas.height * 0.5), 400);
+  setTimeout(() => createBurst(canvas.width * 0.65, canvas.height * 0.45), 750);
+
+  showToast("ðŸ’¥ BAWAL MODE Activated! (Tribute to github.com/deepakprasadverma/Bawal)");
+
+  let frameId;
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vy += 0.08; // gravity
+      p.vx *= 0.985;
+      p.alpha -= 0.014;
+
+      if (p.alpha <= 0) {
+        particles.splice(i, 1);
+        continue;
+      }
+
+      ctx.save();
+      ctx.globalAlpha = Math.max(0, p.alpha);
+      ctx.fillStyle = p.color;
+      ctx.shadowColor = p.color;
+      ctx.shadowBlur = 12;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    }
+
+    if (particles.length > 0) {
+      frameId = requestAnimationFrame(animate);
+    } else {
+      canvas.remove();
+    }
+  }
+
+  animate();
+  if (bawalTimeout) clearTimeout(bawalTimeout);
+  bawalTimeout = setTimeout(() => {
+    cancelAnimationFrame(frameId);
+    canvas.remove();
+  }, 4500);
+}
+
+// 7. Live GitHub Stats Sync
+async function syncGitHubProfile() {
+  try {
+    const res = await fetch("https://api.github.com/users/deepakprasadverma");
+    if (!res.ok) return;
+    const data = await res.json();
+
+    const repoEl = document.getElementById("gh-repos-count");
+    const followersEl = document.getElementById("gh-followers-count");
+    const followingEl = document.getElementById("gh-following-count");
+
+    if (repoEl && typeof data.public_repos === "number") repoEl.textContent = data.public_repos;
+    if (followersEl && typeof data.followers === "number") followersEl.textContent = data.followers;
+    if (followingEl && typeof data.following === "number") followingEl.textContent = data.following;
+  } catch (err) {
+    // Silent fallback to pre-populated real stats
+  }
+}
+
+// 8. Copy to Clipboard & Toast Notification
+function copyText(text, label = "Copied to clipboard!") {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(() => showToast(label));
+  } else {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand("copy");
+    ta.remove();
+    showToast(label);
+  }
+}
+
+function showToast(message) {
+  const toast = document.getElementById("toast-notification");
+  const toastMsg = document.getElementById("toast-message");
+  if (!toast || !toastMsg) return;
+
+  toastMsg.textContent = message;
+  toast.classList.remove("translate-y-24", "opacity-0");
+  toast.classList.add("translate-y-0", "opacity-100");
+
+  setTimeout(() => {
+    toast.classList.remove("translate-y-0", "opacity-100");
+    toast.classList.add("translate-y-24", "opacity-0");
+  }, 3400);
+}
+
+// 9. Dark / Light Theme Toggle
+function toggleTheme() {
+  const html = document.documentElement;
+  const icon = document.getElementById("theme-toggle-icon");
+  html.classList.toggle("light");
+
+  const isLight = html.classList.contains("light");
+  if (icon) {
+    icon.className = isLight ? "fas fa-moon text-indigo-600" : "fas fa-sun text-amber-400";
+  }
+  localStorage.setItem("dpv-theme", isLight ? "light" : "dark");
+}
+
+// 10. Resume / CV Modal
+function openResumeModal() {
+  const modal = document.getElementById("resume-modal");
+  if (modal) {
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+  }
+}
+
+function closeResumeModal() {
+  const modal = document.getElementById("resume-modal");
+  if (modal) {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+  }
+}
+
+// 11. LinkedIn Audit Checklist Interactive Progress
+function updateAuditScore() {
+  const checkboxes = document.querySelectorAll(".audit-checkbox");
+  const scoreEl = document.getElementById("audit-live-score");
+  const barEl = document.getElementById("audit-score-bar");
+  if (!checkboxes.length || !scoreEl || !barEl) return;
+
+  let checkedCount = 0;
+  checkboxes.forEach((cb) => {
+    if (cb.checked) checkedCount++;
+  });
+
+  // Base score is 78, each checked item adds up to 100
+  const bonus = Math.round((checkedCount / checkboxes.length) * 22);
+  const total = Math.min(100, 78 + bonus);
+  scoreEl.textContent = `${total}/100`;
+  barEl.style.width = `${total}%`;
+}
+
+// 12. Contact Form Handler
+function handleContactSubmit(e) {
+  e.preventDefault();
+  const name = document.getElementById("contact-name")?.value.trim() || "Recruiter / Client";
+  const email = document.getElementById("contact-email")?.value.trim() || "";
+  const subject = document.getElementById("contact-subject")?.value.trim() || "Opportunity via Portfolio";
+  const message = document.getElementById("contact-message")?.value.trim() || "";
+
+  const mailtoBody = encodeURIComponent(
+    `Hi Deepak,\n\n${message}\n\nBest regards,\n${name}\n${email}`
+  );
+  const mailtoUrl = `mailto:deepakprasadverma90@gmail.com?subject=${encodeURIComponent(subject)}&body=${mailtoBody}`;
+
+  showToast("Opening your email client to message Deepak...");
+  window.location.href = mailtoUrl;
+}
+
+// Initialize on DOMContentLoaded
+document.addEventListener("DOMContentLoaded", () => {
+  initTypewriter();
+  syncGitHubProfile();
+
+  // Restore saved theme
+  const savedTheme = localStorage.getItem("dpv-theme");
+  if (savedTheme === "light") {
+    document.documentElement.classList.add("light");
+    const icon = document.getElementById("theme-toggle-icon");
+    if (icon) icon.className = "fas fa-moon text-indigo-600";
+  }
+
+  // Terminal Enter key listener
+  const termInput = document.getElementById("terminal-input");
+  if (termInput) {
+    termInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        runTerminalCommand(termInput.value);
+      }
+    });
+  }
+
+  // Keyboard shortcut Ctrl+K or Cmd+K to focus terminal
+  document.addEventListener("keydown", (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+      e.preventDefault();
+      const termSection = document.getElementById("terminal-card");
+      if (termSection) termSection.scrollIntoView({ behavior: "smooth", block: "center" });
+      if (termInput) setTimeout(() => termInput.focus(), 350);
+    }
+    if (e.key === "Escape") {
+      closeProjectModal();
+      closeResumeModal();
+    }
+  });
+
+  // Mobile Menu Toggle
+  const mobileBtn = document.getElementById("mobile-menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  if (mobileBtn && mobileMenu) {
+    mobileBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
+});
+
+</script>
+</body>
+</html>
+
